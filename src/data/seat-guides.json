@@ -1,0 +1,117 @@
+{
+ "amberpet": {
+  "mapLabel": "Amberpet",
+  "places": "Amberpet, Tilaknagar, Golnaka, Kachiguda, Barkatpura",
+  "guide": "No flagship private campus inside Amberpet. Fever Hospital at Nallakunta is the larger government pin. The Amberpet community health centre is the local government clinic. Yashoda Malakpet is the closest strong private hospital."
+ },
+ "bahadurpura": {
+  "mapLabel": "Bahadurpura",
+  "places": "Bahadurpura, Kishan Bagh, Tadbun",
+  "guide": "The new 100-bed hospital is pinned at the zoo entrance, the landmark given in the notes. Owaisi at Kanchanbagh and Osmania at Afzal Gunj remain the larger campuses around this seat."
+ },
+ "chandrayangutta": {
+  "mapLabel": "Chandrayangutta",
+  "places": "Chandrayangutta, Bandlaguda, Santosh Nagar",
+  "guide": "The old city's hospital seat, even though the big campuses sit just over the line. Owaisi and Apollo DRDO at Kanchanbagh are the pair to know. Jangammet’s community health centre is the local government clinic inside this colour."
+ },
+ "charminar": {
+  "mapLabel": "Charminar",
+  "places": "Charminar, Shah Ali Banda, Afzal Gunj, Pathergatti, Moghalpura",
+  "guide": "Princess Esra is the teaching hospital inside this colour, and today’s Osmania General at Afzal Gunj is the public trauma campus, with the government dental college beside it. The closed Charminar government hospital is marked here. Dabirpura’s community centre and Surajbhan Baghvathi maternity are the other government pins. Nizamia, the open 180-bed hospital, falls just over the line in the Yakutpura colour."
+ },
+ "goshamahal": {
+  "mapLabel": "Goshamahal",
+  "places": "Goshamahal, Abids, Begum Bazaar, Dhoolpet, Mallepally",
+  "guide": "Fernandez at Bogulkunta is the maternity hospital in this colour. King Koti is the district hospital, and the Government ENT Hospital is at Koti. The new Osmania complex — 2,000 beds, still a site, aimed at 9 Dec 2027 — is pinned here. Today’s Osmania building is just south, in the Charminar colour."
+ },
+ "jubilee-hills": {
+  "mapLabel": "Jubilee Hills",
+  "places": "Jubilee Hills check post, Yusufguda, Ameerpet, SR Nagar, Erragadda",
+  "guide": "Aster Prime at Ameerpet is the hospital inside this colour. The Institute of Mental Health at Erragadda also falls here. TIMS Sanathnagar, the open 1,082-bed government hospital, falls here. The TIMS pin is the Chest Hospital campus on the SR Nagar–Erragadda metro stretch. Apollo at Film Nagar sits in the neighbouring Khairatabad colour."
+ },
+ "karwan": {
+  "mapLabel": "Karwan",
+  "places": "Golconda, Tolichowki, Karwan, Langer Houz",
+  "guide": "Area Hospital Golconda is the government pin. Dharani, the private hospital named for this seat, falls in the Nampally colour on this map. Olive on NH 163 is the other Tolichowki campus."
+ },
+ "khairatabad": {
+  "mapLabel": "Khairatabad",
+  "places": "Khairatabad, Somajiguda, Punjagutta, Banjara Hills, Film Nagar, Lakdi-ka-pul",
+  "guide": "The hospital belt on this map: Apollo at Film Nagar, Yashoda Somajiguda, NIMS, CARE, Basavatarakam for cancer, Virinchi, and Gleneagles at Lakdi-ka-pul. Aster at Ameerpet falls in the separate Jubilee Hills colour."
+ },
+ "kukatpally": {
+  "mapLabel": "Kukatpally",
+  "places": "Moosapet, Sanathnagar neighbourhood, Balanagar edge",
+  "guide": "OMNI, on the Mumbai highway at Balaji Nagar, is the multispecialty inside this colour. ESIC Sanathnagar also falls here. KPHB is painted as Serilingampally, so Prasad, Ankura and Rainbow Hydernagar sit in that colour even though Kukatpally uses them. SLG at Bachupally is in the Quthbullapur colour. KIMS Kondapur and Yashoda HITEC City are the larger campuses further west."
+ },
+ "lb-nagar": {
+  "mapLabel": "LB Nagar",
+  "places": "LB Nagar, Kothapet, Dilsukhnagar, Vanasthalipuram",
+  "guide": "Kamineni, under the LB Nagar flyover, is the east-city hospital that is open. TIMS LB Nagar is under construction for 9 Dec 2027 — scaffolding, not a ward — and the pin is the seat because the plot was never published. Aware Gleneagles is the other open campus."
+ },
+ "malakpet": {
+  "mapLabel": "Malakpet",
+  "places": "Malakpet, Chaderghat, Moosarambagh, New Malakpet",
+  "guide": "M.N. Area Hospital is the government anchor. Yashoda Malakpet, one of the three leading Yashoda campuses, is the private hospital beside it. Kamineni is the other direction, toward LB Nagar."
+ },
+ "malkajgiri": {
+  "mapLabel": "Malkajgiri",
+  "places": "Malkajgiri, Safilguda, Neredmet, Moula Ali",
+  "guide": "Area Hospital Malkajgiri is the open government hospital. The Lalapet community centre and the Alwal primary centre are the other government clinics. TIMS Alwal is still a site, not a ward. The ECIL hospitals — Poulomi, Srikara and Tulasi — fall in the Medchal colour on this map."
+ },
+ "medchal": {
+  "mapLabel": "Medchal",
+  "places": "Medchal, Shamirpet, and the highway toward Laxmakkapally",
+  "guide": "This colour runs from Medchal town down through ECIL, and east to Keesara and Ghatkesar. The community health centre is the government pin in the town. Shamirpet’s primary centre is on the road toward RVM at Laxmakkapally, which is a charitable teaching hospital outside this colour, not a government one. Poulomi, Srikara and Tulasi are the multispecialty campuses at the ECIL end."
+ },
+ "musheerabad": {
+  "mapLabel": "Musheerabad",
+  "places": "Musheerabad, Chikkadpally, Domalguda, Ashok Nagar",
+  "guide": "Gandhi is the large government hospital for this side of the city. On this map both Gandhi and Pulse sit just across the line, in the Sanathnagar colour. KIMS on Minister Road is the private campus in that same colour."
+ },
+ "nampally": {
+  "mapLabel": "Nampally",
+  "places": "Nampally, Red Hills, Mozamjahi Market, Mehdipatnam edge",
+  "guide": "Niloufer for children and MNJ for cancer, both at Red Hills. Area Hospital Nampally is the government area hospital in this colour. Dharani’s pin also falls here. Fernandez, just east, is the maternity hospital."
+ },
+ "quthbullapur": {
+  "mapLabel": "Quthbullapur",
+  "places": "Quthbullapur, Jeedimetla, Gajularamaram, Suraram, Kompally edge",
+  "guide": "Malla Reddy Narayana at Suraram X Roads is the large multispecialty. SLG at Bachupally and Russh at Suchitra are the other campuses in this colour. Usha Mullapudi, at Gajularamaram, remains the cardiac centre. KIMS Kondapur is the nearest full west-city hospital."
+ },
+ "rajendranagar": {
+  "mapLabel": "Rajendranagar",
+  "places": "Rajendranagar, Attapur, Shivarampally, Budvel",
+  "guide": "The government clinic is the community health centre at Rajendranagar, with primary centres at Myladeverpally, Narkuda and Peddashapur. There is still no large private flagship inside the colour. Attapur uses Olive at Mehdipatnam or Continental and AIG toward Gachibowli."
+ },
+ "sanathnagar": {
+  "mapLabel": "Sanathnagar",
+  "places": "Begumpet, Minister Road, Padmarao Nagar, Gandhi Hospital",
+  "guide": "This colour covers Begumpet, Minister Road and Gandhi — not the Sanathnagar neighbourhood, which is where TIMS and ESIC actually stand. Those two pins fall in Jubilee Hills and Kukatpally. TIMS has been open since 17 August 2026. KIMS on Minister Road is the private campus inside this colour."
+ },
+ "secunderabad": {
+  "mapLabel": "Secunderabad",
+  "places": "Mettuguda, Sitaphalmandi, Chilkalguda, east of the Clock Tower",
+  "guide": "The community health centre at Sitaphalmandi is the government clinic in this colour. The Clock Tower, Paradise, and the big Secunderabad hospitals — Yashoda, KIMS, Sunshine — fall in the cantonment colour next door."
+ },
+ "secunderabad-cantonment": {
+  "mapLabel": "Cantt.",
+  "places": "Trimulgherry, Bowenpally, Marredpally, Clock Tower, Paradise, Karkhana",
+  "guide": "Yashoda on Sarojini Devi Road is a leading campus. Navodaya and Sunshine share Paradise. Apollo Secunderabad and Rainbow at Vikrampuri are in this colour too."
+ },
+ "serilingampally": {
+  "mapLabel": "Serilingampally",
+  "places": "Gachibowli, Kondapur, Madhapur, HITEC City, Miyapur, Nallagandla, Financial District, KPHB",
+  "guide": "The west-city cluster. Area Hospital Kondapur is the government hospital. AIG for gastro and liver, Continental, Arete and the new Apollo in the Financial District, KIMS Kondapur, Yashoda HITEC City, and Sindhu. KPHB, painted in this colour, uses Prasad, Ankura and Rainbow Hydernagar."
+ },
+ "uppal": {
+  "mapLabel": "Uppal",
+  "places": "Uppal, Habsiguda, Ramanthapur, Nagole",
+  "guide": "The primary health centre is the government clinic inside Uppal. There is no flagship of its own. Kamineni at LB Nagar is the closest large hospital. Yashoda Malakpet is the other direction."
+ },
+ "yakutpura": {
+  "mapLabel": "Yakutpura",
+  "places": "Yakutpura, Dabirpura, Rein Bazar, Kanchanbagh edge",
+  "guide": "Owaisi at Kanchanbagh is the large teaching campus in this colour, and it is not a state government hospital. Apna at Santosh Nagar is the local private hospital. Nizamia’s gate, a Charminar hospital, also falls in this colour."
+ }
+}

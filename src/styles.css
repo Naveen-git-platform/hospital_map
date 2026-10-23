@@ -1,0 +1,434 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #14201c;
+  --color-paper: #f4efe6;
+  --color-paper-2: #ebe4d6;
+  --color-line: #ddd4c4;
+  --color-muted: #5e6b63;
+  --color-forest: #1f6b4a;
+  --color-forest-deep: #143d2c;
+  --color-pin: #c2412d;
+  --font-sans: "Figtree", system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --radius-lg: 0.75rem;
+  --radius-xl: 0.75rem;
+}
+
+/* ---- Map pins --------------------------------------------------------- */
+
+.pin {
+  border: 2px solid var(--color-paper);
+  background: var(--color-pin);
+  border-radius: 999px;
+  width: 1.15rem;
+  height: 1.15rem;
+  box-shadow: 0 1px 3px #14201c59;
+}
+.pin-public {
+  background: var(--color-forest);
+  border-radius: 0.2rem;
+}
+.pin-specialty {
+  background: var(--color-paper);
+  border-color: var(--color-pin);
+  box-shadow: inset 0 0 0 2px var(--color-pin);
+}
+.pin-project {
+  background: var(--color-paper);
+  box-shadow: inset 0 0 0 2px var(--color-forest);
+  border-radius: 0.15rem;
+  transform: rotate(45deg);
+}
+.pin-closed {
+  background: var(--color-paper-2);
+  box-shadow: inset 0 0 0 2px var(--color-muted);
+  border-radius: 0.15rem;
+}
+.pin-clinic {
+  background: var(--color-forest);
+  border-width: 1px;
+  border-radius: 0.1rem;
+  width: 0.55rem;
+  height: 0.55rem;
+}
+.pin-anchor:has(.pin-clinic) {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+.pin-anchor {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1.75rem;
+  height: 3rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  line-height: 0;
+  cursor: pointer;
+}
+.pin-float {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 1.35rem;
+}
+.pin-anchor .pin {
+  position: relative;
+  z-index: 1;
+  flex: none;
+}
+.pin-stem,
+.pin-ring {
+  display: none;
+}
+.pin-stem {
+  flex: auto;
+  width: 2px;
+  min-height: 0.85rem;
+  background: var(--color-ink);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-paper) 75%, transparent);
+}
+.pin-ring {
+  position: absolute;
+  bottom: -0.15rem;
+  left: 50%;
+  width: 1rem;
+  height: 0.4rem;
+  margin-left: -0.5rem;
+  border: 2px solid var(--color-pin);
+  border-radius: 999px;
+  pointer-events: none;
+}
+.pin-anchor.is-selected .pin-float {
+  height: 100%;
+}
+.pin-anchor.is-selected .pin {
+  outline: 2px solid var(--color-ink);
+  transform: scale(1.2);
+}
+.pin-anchor.is-selected .pin.pin-project {
+  transform: rotate(45deg) scale(1.15);
+}
+.pin-anchor.is-selected .pin-stem,
+.pin-anchor.is-selected .pin-ring {
+  display: block;
+}
+.pin-anchor.is-selected:has(.pin-public) .pin-ring,
+.pin-anchor.is-selected:has(.pin-project) .pin-ring {
+  border-color: var(--color-forest);
+}
+.pin-anchor.is-selected:has(.pin-closed) .pin-ring {
+  border-color: var(--color-muted);
+}
+.pin-anchor.is-arriving .pin-float {
+  animation: pin-drop 0.55s cubic-bezier(0.16, 0.84, 0.32, 1) both;
+}
+.pin-anchor.is-selected .pin-ring {
+  animation: pin-pulse 1.6s ease-out infinite;
+}
+.pin-anchor.is-dim {
+  opacity: 0.28;
+}
+.pin-anchor.is-off {
+  display: none;
+}
+@keyframes pin-drop {
+  from {
+    opacity: 0;
+    transform: translateY(-1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes pin-pulse {
+  from {
+    opacity: 0.9;
+    transform: scale(0.55);
+  }
+  to {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}
+
+/* ---- List-row markers ------------------------------------------------- */
+
+.pin-dot {
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-top: 0.4rem;
+  border-radius: 999px;
+  background: var(--color-pin);
+}
+.pin-dot.pin-public {
+  background: var(--color-forest);
+  border-radius: 0.15rem;
+}
+.pin-dot.pin-specialty {
+  background: none;
+  box-shadow: inset 0 0 0 2px var(--color-pin);
+}
+.pin-dot.pin-project {
+  background: var(--color-paper);
+  box-shadow: inset 0 0 0 2px var(--color-forest);
+  border-radius: 0.15rem;
+  transform: rotate(45deg);
+}
+.pin-dot.pin-closed {
+  background: var(--color-paper-2);
+  box-shadow: inset 0 0 0 2px var(--color-muted);
+  border-radius: 0.15rem;
+}
+.pin-dot.pin-clinic {
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-top: 0.45rem;
+  background: var(--color-forest);
+  border-radius: 0.1rem;
+}
+
+/* ---- Legend ----------------------------------------------------------- */
+
+.legend-swatch {
+  flex: none;
+  width: 0.7rem;
+  height: 0.7rem;
+  border: 2px solid var(--color-paper);
+  border-radius: 999px;
+  background: var(--color-pin);
+  box-shadow: 0 0 0 1px var(--color-pin);
+}
+.legend-swatch.pin-public {
+  background: var(--color-forest);
+  box-shadow: 0 0 0 1px var(--color-forest);
+  border-radius: 0.15rem;
+}
+.legend-swatch.pin-project {
+  background: var(--color-paper);
+  box-shadow: inset 0 0 0 2px var(--color-forest);
+  border-radius: 0.12rem;
+  transform: rotate(45deg);
+}
+.legend-swatch.pin-closed {
+  background: var(--color-paper-2);
+  box-shadow: inset 0 0 0 2px var(--color-muted);
+  border-radius: 0.15rem;
+}
+.map-legend {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 800;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-height: calc(100% - 1.5rem);
+  margin: 0;
+  padding: 0.5rem 0.75rem;
+  overflow-y: auto;
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--color-paper) 95%, transparent);
+  color: var(--color-ink);
+  font-size: 0.75rem;
+  list-style: none;
+  pointer-events: auto;
+}
+.map-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.map-legend li.legend-group {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+.legend-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+}
+.legend-clear {
+  align-self: flex-start;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--color-forest);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.legend-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.25rem 0 0;
+  border-top: 1px solid var(--color-line);
+  list-style: none;
+}
+.legend-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.legend-title {
+  display: block;
+  margin: 0.25rem 0 0.125rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+.legend-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin: 0 -0.25rem;
+  padding: 0.125rem 0.25rem;
+  border: 0;
+  border-radius: 0.375rem;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.legend-button[aria-pressed="true"] {
+  background: var(--color-forest);
+  color: var(--color-paper);
+  font-weight: 600;
+}
+.legend-icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 999px;
+  background: var(--color-paper-2);
+  color: var(--color-forest);
+  box-shadow: inset 0 0 0 1px var(--color-forest);
+}
+.legend-button[aria-pressed="true"] .legend-icon {
+  background: var(--color-paper);
+}
+.legend-credit {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+/* ---- Constituency labels --------------------------------------------- */
+
+.seat-label {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--color-ink);
+  white-space: nowrap;
+  pointer-events: none;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 4px #fff,
+    1px 1px #fff,
+    -1px -1px #fff;
+}
+.seat-label.is-dim {
+  opacity: 0.35;
+}
+.seat-label.is-selected {
+  color: var(--color-forest-deep);
+}
+.seat-label.is-zoomed:not(.is-selected) {
+  opacity: 0;
+}
+
+/* ---- MapLibre overrides ---------------------------------------------- */
+
+.maplibregl-map {
+  width: 100%;
+  height: 100%;
+  background: var(--color-ink);
+  font-family: var(--font-sans);
+}
+.maplibregl-ctrl-attrib {
+  background: color-mix(in srgb, var(--color-paper) 90%, transparent);
+  font-size: 0.65rem;
+}
+.maplibregl-ctrl-top-right {
+  top: 0.75rem;
+  right: 0.75rem;
+}
+.maplibregl-ctrl-group {
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  background: var(--color-paper);
+  box-shadow: none;
+}
+.maplibregl-ctrl-group button {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.maplibregl-ctrl-group button + button {
+  border-top: 1px solid var(--color-line);
+}
+
+/* ---- Misc ------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .pin-anchor.is-arriving .pin-float,
+  .pin-anchor.is-selected .pin-ring {
+    animation: none;
+  }
+}
+
+/* ~730 rows in long lists; let the browser skip off-screen layout. */
+aside li {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 5rem;
+}
+
+@media (pointer: coarse) {
+  .legend-toggle {
+    min-height: 2.75rem;
+  }
+  .legend-button {
+    min-height: 2.5rem;
+  }
+  .legend-clear {
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-height: 500px) {
+  .map-legend {
+    top: 0.5rem;
+    max-height: calc(100% - 1rem);
+  }
+}

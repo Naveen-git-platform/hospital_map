@@ -1,0 +1,2416 @@
+[
+ {
+  "id": "apollo-jubilee",
+  "name": "Apollo Hospitals",
+  "campus": "Jubilee Hills",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "jubilee-hills",
+   "nampally",
+   "karwan",
+   "goshamahal"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "cancer",
+   "transplant",
+   "emergency"
+  ],
+  "rank": 1,
+  "lead": 3,
+  "bestFor": "Heart, cancer, and complex surgery",
+  "lat": 17.414936,
+  "lng": 78.413178,
+  "phone": "040-23607777",
+  "address": "Road No. 72, Film Nagar",
+  "note": "Apollo’s Jubilee Hills campus, at Film Nagar, open since 1988. One of the current leading hospitals in the city: more than 50 specialties, about 1,400 outpatients a day, the first PET-CT in India, and a comprehensive stroke centre.",
+  "field": "Film Nagar falls in the Khairatabad colour on this map.",
+  "caution": "A Telangana consumer commission order, in the same research set, directed Apollo Hyderabad to pay ₹43.36 lakh over a 2013 stroke death — delay through the golden hour."
+ },
+ {
+  "id": "aig",
+  "name": "AIG Hospitals",
+  "campus": "Gachibowli",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "kukatpally",
+   "rajendranagar",
+   "quthbullapur"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "gastro",
+   "transplant",
+   "emergency"
+  ],
+  "rank": 2,
+  "lead": 8,
+  "bestFor": "Gastroenterology and liver transplant",
+  "lat": 17.44318,
+  "lng": 78.36601,
+  "phone": "040-42444222",
+  "address": "Mindspace Road, Gachibowli",
+  "note": "AIG at Gachibowli. A current leading hospital for gastroenterology and liver transplant, and a full multispecialty campus besides. The west-city referral for liver and digestive disease."
+ },
+ {
+  "id": "yashoda-somajiguda",
+  "name": "Yashoda Hospitals",
+  "campus": "Somajiguda",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "jubilee-hills",
+   "nampally",
+   "musheerabad",
+   "sanathnagar"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "cancer",
+   "transplant",
+   "neuro",
+   "emergency"
+  ],
+  "rank": 3,
+  "lead": 4,
+  "bestFor": "Transplants, cancer, and heart",
+  "lat": 17.424545,
+  "lng": 78.456953,
+  "phone": "040-45674567",
+  "address": "Raj Bhavan Road, Somajiguda",
+  "note": "Yashoda’s central campus, one of three in the current leading set — Somajiguda, Secunderabad, and Malakpet. The group reports 25 lakh patients in five years and a cancer load above 10,000.",
+  "field": "Somajiguda sits in the Khairatabad colour, across the junction from NIMS."
+ },
+ {
+  "id": "kims-sec",
+  "name": "KIMS Hospitals",
+  "campus": "Secunderabad",
+  "seat": "sanathnagar",
+  "serves": [
+   "sanathnagar",
+   "secunderabad",
+   "secunderabad-cantonment",
+   "musheerabad",
+   "malkajgiri",
+   "medchal"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "transplant",
+   "neuro",
+   "emergency"
+  ],
+  "rank": 4,
+  "lead": 1,
+  "bestFor": "Heart and lung transplant",
+  "lat": 17.437271,
+  "lng": 78.482682,
+  "phone": "040-44885000",
+  "address": "Minister Road, Secunderabad",
+  "note": "KIMS on Minister Road, the group’s central campus and the first name in the current leading set. A listed hospital group, reported above 4,000 beds across its hospitals.",
+  "field": "On this map the pin sits in the Sanathnagar colour, on the Begumpet side of Secunderabad."
+ },
+ {
+  "id": "yashoda-hitec",
+  "name": "Yashoda Hospitals",
+  "campus": "HITEC City",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "kukatpally",
+   "quthbullapur"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "cancer",
+   "heart",
+   "transplant",
+   "emergency"
+  ],
+  "rank": 5,
+  "bestFor": "Cancer and critical care",
+  "lat": 17.462143,
+  "lng": 78.385162,
+  "phone": "040-45674567",
+  "address": "HITEC City–Kukatpally road",
+  "note": "Large HITEC City campus used by both Kondapur and KPHB. Go here for oncology and a full ICU when Gachibowli is the wrong direction."
+ },
+ {
+  "id": "continental",
+  "name": "Continental Hospitals",
+  "campus": "Financial District",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "rajendranagar",
+   "kukatpally"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "cancer",
+   "emergency",
+   "neuro"
+  ],
+  "rank": 6,
+  "bestFor": "Emergency and multispecialty",
+  "lat": 17.41766,
+  "lng": 78.33913,
+  "phone": "040-67000000",
+  "address": "Nanakramguda, Financial District",
+  "note": "The Financial District campus. Closest serious hospital for Nanakramguda, and a practical drive from Attapur and upper Rajendranagar."
+ },
+ {
+  "id": "kims-kondapur",
+  "name": "KIMS Hospitals",
+  "campus": "Kondapur",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "kukatpally",
+   "quthbullapur"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "women-child",
+   "emergency",
+   "neuro"
+  ],
+  "rank": 7,
+  "lead": 2,
+  "bestFor": "Multispecialty, including mother and child",
+  "lat": 17.466147,
+  "lng": 78.367744,
+  "phone": "040-44885000",
+  "address": "Kondapur, near the botanical garden",
+  "note": "The Kondapur tower, with the women’s and children’s wing on the same campus. The west-city KIMS campus for KPHB, Kondapur, and north Gachibowli."
+ },
+ {
+  "id": "care-banjara",
+  "name": "CARE Hospitals",
+  "campus": "Banjara Hills",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "jubilee-hills",
+   "nampally"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "neuro",
+   "emergency"
+  ],
+  "rank": 8,
+  "bestFor": "Cardiology and neurosciences",
+  "lat": 17.41251,
+  "lng": 78.45035,
+  "phone": "040-61656565",
+  "address": "Road No. 1, Banjara Hills",
+  "note": "The original CARE campus on Road No. 1. A cardiac and neuro hospital in the middle of the Banjara Hills cluster."
+ },
+ {
+  "id": "yashoda-sec",
+  "name": "Yashoda Hospitals",
+  "campus": "Secunderabad",
+  "seat": "secunderabad-cantonment",
+  "serves": [
+   "secunderabad-cantonment",
+   "secunderabad",
+   "malkajgiri",
+   "musheerabad",
+   "medchal"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "cancer",
+   "neuro",
+   "emergency"
+  ],
+  "rank": 9,
+  "lead": 5,
+  "bestFor": "Full multispecialty, north of the lake",
+  "lat": 17.44189,
+  "lng": 78.49715,
+  "phone": "040-45674567",
+  "address": "Sarojini Devi Road, Secunderabad",
+  "note": "Yashoda Secunderabad, on Sarojini Devi Road. The second of the group’s three leading campuses, and the practical private hospital for the cantonment and Malkajgiri.",
+  "field": "Navodaya at Paradise is the local private campus. Yashoda is the larger hospital on the same side of the lake."
+ },
+ {
+  "id": "yashoda-malakpet",
+  "name": "Yashoda Hospitals",
+  "campus": "Malakpet",
+  "seat": "malakpet",
+  "serves": [
+   "malakpet",
+   "amberpet",
+   "charminar",
+   "yakutpura",
+   "uppal",
+   "lb-nagar"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "neuro",
+   "emergency",
+   "women-child"
+  ],
+  "rank": 10,
+  "lead": 6,
+  "bestFor": "The east-central private hospital",
+  "lat": 17.374656,
+  "lng": 78.499872,
+  "phone": "040-45674567",
+  "address": "Malakpet",
+  "note": "Yashoda Malakpet, the third leading campus, serving Malakpet, Chaderghat and Amberpet. M.N. Area Hospital is a few streets away."
+ },
+ {
+  "id": "nims",
+  "name": "NIMS",
+  "campus": "Punjagutta",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "musheerabad",
+   "sanathnagar",
+   "nampally",
+   "jubilee-hills"
+  ],
+  "tier": "public",
+  "focus": [
+   "neuro",
+   "heart",
+   "emergency",
+   "transplant"
+  ],
+  "rank": 11,
+  "lead": 7,
+  "expanding": true,
+  "bestFor": "Government referral, especially neuro",
+  "lat": 17.422175,
+  "lng": 78.451822,
+  "address": "Punjagutta",
+  "note": "Nizam’s Institute of Medical Sciences, Punjagutta. The government referral in this colour, especially for neurology. Outpatient care is low-cost. Expect a public-hospital queue.",
+  "field": "An expansion of about 2,020 beds is underway on the same campus, including a large ICU and theatre block. The wider notes put the project near ₹1,700 crore. MEIL is the contractor named there."
+ },
+ {
+  "id": "gandhi",
+  "name": "Gandhi Hospital",
+  "campus": "Musheerabad",
+  "seat": "sanathnagar",
+  "serves": [
+   "sanathnagar",
+   "musheerabad",
+   "secunderabad",
+   "amberpet",
+   "malkajgiri"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency",
+   "neuro"
+  ],
+  "rank": 12,
+  "bestFor": "Largest government hospital in the city",
+  "lat": 17.42552,
+  "lng": 78.50196,
+  "address": "Musheerabad / Padmarao Nagar",
+  "note": "Gandhi Medical College’s hospital. This map’s colour puts the campus in Sanathnagar, one boundary over from Musheerabad.",
+  "field": "Still the north-city public hospital while TIMS Sanathnagar ramps up surgery.",
+  "caution": "Field notes from 2026 record extinguishers at Gandhi labelled last serviced in 2015, and damaged fire hoses. The same observation was made at Osmania and Niloufer. It is a reported finding, not a fire-department certificate."
+ },
+ {
+  "id": "osmania",
+  "name": "Osmania General Hospital",
+  "campus": "Afzal Gunj",
+  "seat": "charminar",
+  "serves": [
+   "charminar",
+   "goshamahal",
+   "bahadurpura",
+   "yakutpura",
+   "nampally",
+   "chandrayangutta"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 13,
+  "bestFor": "Public trauma for the old city",
+  "lat": 17.37295,
+  "lng": 78.47427,
+  "address": "Afzal Gunj",
+  "note": "Today’s Osmania General, Afzal Gunj. Teaching campus of Osmania Medical College. On this map the standing hospital sits in the Charminar colour. The replacement complex is a separate pin, in Goshamahal.",
+  "field": "The notes also record an Owaisi letter on broken digital X-ray machines, with patients sent on to Gandhi.",
+  "caution": "The same 2026 field note on fire equipment at Gandhi and Niloufer records extinguishers here with a 2015 service date. Treat it as a reported observation, not an inspection certificate."
+ },
+ {
+  "id": "kamineni",
+  "name": "Kamineni Hospitals",
+  "campus": "LB Nagar",
+  "seat": "lb-nagar",
+  "serves": [
+   "lb-nagar",
+   "uppal",
+   "malakpet",
+   "amberpet",
+   "yakutpura"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "emergency",
+   "neuro",
+   "women-child"
+  ],
+  "rank": 14,
+  "bestFor": "East Hyderabad anchor",
+  "lat": 17.351637,
+  "lng": 78.556165,
+  "address": "LB Nagar, by the inner ring road flyover",
+  "note": "The hospital the east of the city actually uses. LB Nagar, Kothapet, Dilsukhnagar, Uppal, and Vanasthalipuram all point here first."
+ },
+ {
+  "id": "owaisi",
+  "name": "Owaisi Hospital",
+  "campus": "Kanchanbagh",
+  "seat": "yakutpura",
+  "serves": [
+   "yakutpura",
+   "chandrayangutta",
+   "bahadurpura",
+   "charminar",
+   "lb-nagar"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "emergency",
+   "heart",
+   "women-child"
+  ],
+  "rank": 15,
+  "bestFor": "Largest hospital for the old city",
+  "lat": 17.340848,
+  "lng": 78.506744,
+  "address": "Kanchanbagh",
+  "note": "Deccan College teaching hospital, and the large campus south of the old city. It is a trust hospital, not a state government hospital. Chandrayangutta, Bahadurpura and Charminar use it anyway."
+ },
+ {
+  "id": "basavatarakam",
+  "name": "Basavatarakam Cancer Hospital",
+  "campus": "Banjara Hills",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "jubilee-hills",
+   "nampally",
+   "karwan"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "cancer"
+  ],
+  "rank": 16,
+  "bestFor": "Cancer, including charitable care",
+  "lat": 17.417333,
+  "lng": 78.430111,
+  "address": "Road No. 10, Banjara Hills",
+  "note": "Indo-American cancer centre. The dedicated oncology campus on Banjara Hills, used when the case is cancer rather than a general multispecialty admission."
+ },
+ {
+  "id": "gleneagles",
+  "name": "Gleneagles Hospital",
+  "campus": "Lakdi-ka-pul",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "nampally",
+   "goshamahal"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "gastro",
+   "transplant",
+   "emergency"
+  ],
+  "rank": 17,
+  "bestFor": "Liver and multispecialty, central",
+  "lat": 17.405273,
+  "lng": 78.463144,
+  "address": "Lakdi-ka-pul",
+  "note": "Formerly Global Hospitals. A central campus for liver work and general multispecialty care, between the old city and Banjara Hills."
+ },
+ {
+  "id": "star",
+  "name": "Star Hospitals",
+  "campus": "Banjara Hills",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "jubilee-hills"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "heart",
+   "emergency"
+  ],
+  "rank": 18,
+  "bestFor": "Cardiac care on Road No. 10",
+  "lat": 17.415691,
+  "lng": 78.445461,
+  "address": "Road No. 10, Banjara Hills",
+  "note": "A focused cardiac campus in the Banjara Hills cluster, between Apollo and CARE."
+ },
+ {
+  "id": "rainbow",
+  "name": "Rainbow Children's Hospital",
+  "campus": "Banjara Hills",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "jubilee-hills",
+   "nampally"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "women-child"
+  ],
+  "rank": 19,
+  "bestFor": "Children and childbirth",
+  "lat": 17.42545,
+  "lng": 78.43193,
+  "address": "Banjara Hills",
+  "note": "The main Rainbow campus for paediatrics and maternity on the Banjara Hills side. Rainbow Hydernagar, for Kukatpally, is a separate pin."
+ },
+ {
+  "id": "fernandez",
+  "name": "Fernandez Hospital",
+  "campus": "Bogulkunta",
+  "seat": "goshamahal",
+  "serves": [
+   "goshamahal",
+   "nampally",
+   "charminar",
+   "khairatabad"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "women-child"
+  ],
+  "rank": 20,
+  "bestFor": "Maternity",
+  "lat": 17.39215,
+  "lng": 78.479365,
+  "address": "Bogulkunta",
+  "note": "The city's best-known maternity hospital, in Bogulkunta near Abids. On this map the pin sits in the Goshamahal colour."
+ },
+ {
+  "id": "niloufer",
+  "name": "Niloufer Hospital",
+  "campus": "Red Hills",
+  "seat": "nampally",
+  "serves": [
+   "nampally",
+   "goshamahal",
+   "charminar",
+   "khairatabad"
+  ],
+  "tier": "public",
+  "focus": [
+   "women-child",
+   "emergency"
+  ],
+  "rank": 21,
+  "bestFor": "Government children's hospital",
+  "lat": 17.398846,
+  "lng": 78.46145,
+  "address": "Red Hills",
+  "note": "The large government hospital for children, at Red Hills, next to MNJ.",
+  "caution": "Included in the 2026 field note on fire equipment at Gandhi, Osmania and Niloufer, which recorded a 2015 service date. A reported observation, not a certificate."
+ },
+ {
+  "id": "mnj",
+  "name": "MNJ Cancer Hospital",
+  "campus": "Red Hills",
+  "seat": "nampally",
+  "serves": [
+   "nampally",
+   "goshamahal",
+   "charminar",
+   "khairatabad",
+   "jubilee-hills"
+  ],
+  "tier": "public",
+  "focus": [
+   "cancer"
+  ],
+  "rank": 22,
+  "bestFor": "Government cancer care",
+  "lat": 17.3994,
+  "lng": 78.4624,
+  "address": "Red Hills",
+  "note": "MNJ Institute of Oncology, the regional government cancer centre, beside Niloufer. The public alternative to Basavatarakam and Apollo's cancer wing."
+ },
+ {
+  "id": "sunshine",
+  "name": "Sunshine Hospitals",
+  "campus": "Secunderabad",
+  "seat": "secunderabad-cantonment",
+  "serves": [
+   "secunderabad-cantonment",
+   "secunderabad",
+   "malkajgiri"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "neuro"
+  ],
+  "rank": 23,
+  "bestFor": "Orthopaedics and multispecialty",
+  "lat": 17.44118,
+  "lng": 78.48683,
+  "address": "PG Road, Paradise",
+  "note": "The Paradise / PG Road campus. A strong orthopaedic and multispecialty hospital for Secunderabad and the cantonment."
+ },
+ {
+  "id": "citizens",
+  "name": "Citizens Specialty Hospital",
+  "campus": "Nallagandla",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "kukatpally",
+   "rajendranagar"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "heart",
+   "neuro",
+   "emergency"
+  ],
+  "rank": 24,
+  "bestFor": "Nallagandla and the outer west",
+  "lat": 17.470774,
+  "lng": 78.311311,
+  "address": "Nallagandla",
+  "note": "The westernmost serious campus, for Nallagandla, Tellapur, and Lingampally. Gachibowli's AIG and Continental are the step up if you can drive in."
+ },
+ {
+  "id": "medicover-hitec",
+  "name": "Medicover Hospitals",
+  "campus": "HITEC City",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "kukatpally"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "heart",
+   "women-child",
+   "emergency"
+  ],
+  "rank": 25,
+  "bestFor": "HITEC City multispecialty",
+  "lat": 17.455214,
+  "lng": 78.37756,
+  "address": "HITEC City",
+  "note": "Between Madhapur and Kondapur. A solid multispecialty when KIMS Kondapur or Yashoda HITEC is full, not a reason to skip them for a complex case."
+ },
+ {
+  "id": "aster",
+  "name": "Aster Prime Hospital",
+  "campus": "Ameerpet",
+  "seat": "jubilee-hills",
+  "serves": [
+   "jubilee-hills",
+   "sanathnagar",
+   "kukatpally"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "heart",
+   "emergency",
+   "neuro"
+  ],
+  "rank": 26,
+  "bestFor": "Ameerpet multispecialty",
+  "lat": 17.437348,
+  "lng": 78.446257,
+  "address": "Ameerpet",
+  "note": "The private hospital inside the Jubilee Hills colour on this map, at Ameerpet. For a bigger case, Apollo at Film Nagar is the next campus over."
+ },
+ {
+  "id": "olive",
+  "name": "Olive Hospital",
+  "campus": "Mehdipatnam",
+  "seat": "karwan",
+  "serves": [
+   "karwan",
+   "nampally",
+   "rajendranagar",
+   "bahadurpura"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "heart",
+   "women-child"
+  ],
+  "rank": 27,
+  "bestFor": "Mehdipatnam and Tolichowki",
+  "lat": 17.393625,
+  "lng": 78.427292,
+  "address": "Tolichowki, NH 163",
+  "note": "The useful local multispecialty for Mehdipatnam, Tolichowki, and the Attapur approach. Higher centres are Apollo and CARE toward Banjara Hills."
+ },
+ {
+  "id": "virinchi",
+  "name": "Virinchi Hospitals",
+  "campus": "Banjara Hills",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "nampally",
+   "jubilee-hills"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "neuro",
+   "heart"
+  ],
+  "rank": 28,
+  "bestFor": "Banjara Hills multispecialty",
+  "lat": 17.408095,
+  "lng": 78.451494,
+  "address": "Road No. 1, Banjara Hills",
+  "note": "A Banjara Hills multispecialty near Masab Tank, beside NIMS and Apollo."
+ },
+ {
+  "id": "aware",
+  "name": "Aware Gleneagles",
+  "campus": "LB Nagar",
+  "seat": "lb-nagar",
+  "serves": [
+   "lb-nagar",
+   "uppal"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "heart",
+   "women-child"
+  ],
+  "rank": 29,
+  "bestFor": "Second campus in LB Nagar",
+  "lat": 17.345958,
+  "lng": 78.539913,
+  "address": "LB Nagar",
+  "note": "The other large hospital in LB Nagar, south of Kamineni. Use it when Kamineni is the wrong fit, not instead of a true quaternary centre for a rare case."
+ },
+ {
+  "id": "usha",
+  "name": "Usha Mullapudi Cardiac Centre",
+  "campus": "Gajularamaram",
+  "seat": "quthbullapur",
+  "serves": [
+   "quthbullapur",
+   "kukatpally",
+   "medchal",
+   "malkajgiri"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "heart"
+  ],
+  "rank": 30,
+  "bestFor": "Heart care for the north",
+  "lat": 17.520189,
+  "lng": 78.429149,
+  "address": "Gajularamaram, Jeedimetla",
+  "note": "A dedicated cardiac centre for Quthbullapur, Jeedimetla, and the Kompally approach. For anything beyond the heart, KIMS Kondapur or KIMS Secunderabad is the drive."
+ },
+ {
+  "id": "princess-esra",
+  "name": "Princess Esra Hospital",
+  "campus": "Shah Ali Banda",
+  "seat": "charminar",
+  "serves": [
+   "charminar",
+   "goshamahal",
+   "bahadurpura",
+   "yakutpura",
+   "chandrayangutta"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "women-child"
+  ],
+  "rank": 31,
+  "bestFor": "Teaching hospital inside the old city",
+  "lat": 17.35645,
+  "lng": 78.47417,
+  "address": "Shah Ali Banda, Charminar",
+  "note": "Deccan College's old-city hospital, a short walk from Charminar. Owaisi at Kanchanbagh is the larger campus when the case needs more."
+ },
+ {
+  "id": "apollo-drdo",
+  "name": "Apollo DRDO Hospital",
+  "campus": "Kanchanbagh",
+  "seat": "lb-nagar",
+  "serves": [
+   "lb-nagar",
+   "yakutpura",
+   "chandrayangutta",
+   "charminar"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "heart"
+  ],
+  "rank": 32,
+  "bestFor": "Kanchanbagh multispecialty",
+  "lat": 17.34218,
+  "lng": 78.50731,
+  "address": "Kanchanbagh, inner ring road",
+  "note": "Apollo's smaller Kanchanbagh campus, beside the defence estate. On this map it falls just inside LB Nagar, next to Owaisi."
+ },
+ {
+  "id": "medicover-sec",
+  "name": "Medicover Hospitals",
+  "campus": "Secunderabad",
+  "seat": "secunderabad-cantonment",
+  "serves": [
+   "secunderabad-cantonment",
+   "secunderabad",
+   "malkajgiri"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "women-child",
+   "heart"
+  ],
+  "rank": 33,
+  "bestFor": "Cantonment multispecialty",
+  "lat": 17.4405,
+  "lng": 78.50459,
+  "address": "Regimental Bazaar, Sarojini Devi Road",
+  "note": "Inside the cantonment colour, near Yashoda Secunderabad. A local multispecialty; KIMS and Yashoda are the larger campuses on the same road."
+ },
+ {
+  "id": "tims-sanathnagar",
+  "name": "MCR TIMS",
+  "campus": "Sanathnagar",
+  "seat": "jubilee-hills",
+  "serves": [
+   "jubilee-hills",
+   "kukatpally",
+   "sanathnagar",
+   "musheerabad"
+  ],
+  "tier": "public",
+  "focus": [
+   "heart",
+   "emergency",
+   "transplant",
+   "neuro"
+  ],
+  "rank": 34,
+  "project": true,
+  "phase": "open",
+  "bestFor": "Open. 1,082-bed government super-specialty",
+  "lat": 17.44585,
+  "lng": 78.43555,
+  "address": "Chest Hospital campus, SR Nagar–Erragadda metro stretch",
+  "note": "Dr. Marri Chenna Reddy Telangana Institute of Medical Sciences. Inaugurated 17 August 2026 at 4:30pm by Chief Minister A. Revanth Reddy. India’s largest single-phase government super-specialty in this build: 1,082 beds, about ₹1,126 crore, 53 acres beside the metro. Built by MEIL, architect Hafeez Contractor, for the Roads and Buildings department.",
+  "facts": [
+   "Beds: 88 emergency, 30 dialysis, 300 ICU, 400 general, and 264 for medical tourism, the Employees Health Scheme and other categories. The campus brief also counts 100 EHS beds and 100 medical-tourism beds inside that share — not a second 1,082.",
+   "Three blocks: emergency, outpatient, inpatient. Theatre counts published the same season do not match — 16 modular theatres in one brief, 31 major theatres in the later rollout. The higher number is the planned campus, not a promise that every theatre is running.",
+   "30-bed dialysis unit, 24 hours, four shifts. Imaging named on the campus: 128-slice CT, 3 Tesla MRI, Siemens SOMATOM, C-arm fluoroscopy. 22 super-specialty OPDs.",
+   "Being developed as an organ-transplant centre. The building is wrapped around an AI pneumatic-tube network that is supposed to move samples and medicines between wards in under two minutes — a first claimed for a government hospital.",
+   "About 600 outpatients a day as of 22 October 2026. Surgery is opening in phases, to take load off Gandhi, Osmania and NIMS, where the wait has been quoted at three months."
+  ],
+  "field": "This simplified colour paints the real Sanathnagar–Erragadda stretch as Jubilee Hills. The pin is the Government Chest Hospital campus on that metro side.",
+  "caution": "The building is open. The full hospital is not. As of 22 October 2026 surgery was still being switched on in phases. Do not treat this as a drop-in replacement for Gandhi, Osmania or NIMS yet."
+ },
+ {
+  "id": "esic-sanathnagar",
+  "name": "ESIC Hospital",
+  "campus": "Sanathnagar",
+  "seat": "kukatpally",
+  "serves": [
+   "kukatpally",
+   "sanathnagar",
+   "jubilee-hills"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 35,
+  "expanding": true,
+  "bestFor": "Insured workers, new OPD block",
+  "lat": 17.4556,
+  "lng": 78.4415,
+  "address": "Sanathnagar",
+  "note": "ESIC’s Sanathnagar hospital. A new outpatient block opened in July 2026.",
+  "field": "This simplified colour says Kukatpally. The pin is the Sanathnagar neighbourhood."
+ },
+ {
+  "id": "new-osmania",
+  "name": "New Osmania General Hospital",
+  "campus": "Goshamahal",
+  "seat": "goshamahal",
+  "serves": [
+   "goshamahal",
+   "charminar",
+   "nampally",
+   "bahadurpura",
+   "yakutpura"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 36,
+  "project": true,
+  "phase": "building",
+  "bestFor": "2,000 beds, still a site — Dec 2027",
+  "lat": 17.3785,
+  "lng": 78.4735,
+  "address": "Goshamahal / Malakunta",
+  "note": "The replacement complex: ₹2,700 crore, 2,000 beds. Not the building you can walk into. Today’s Osmania is at Afzal Gunj, one pin south of here.",
+  "facts": [
+   "Tied to the same 9 December 2027 date as TIMS LB Nagar, TIMS Alwal and the Warangal super-specialty tower.",
+   "With open TIMS Sanathnagar, these four unfinished sites are the 10,000-bed promise. Warangal is outside this map."
+  ],
+  "field": "The largest project in the old city. The pin is Goshamahal / Malakunta."
+ },
+ {
+  "id": "falaknuma-hospital",
+  "name": "Falaknuma Government Hospital",
+  "campus": "Zoo Park",
+  "seat": "bahadurpura",
+  "serves": [
+   "bahadurpura",
+   "charminar",
+   "chandrayangutta"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 37,
+  "project": true,
+  "bestFor": "New 100-bed public hospital",
+  "lat": 17.351442,
+  "lng": 78.44556,
+  "address": "Falaknuma, by Nehru Zoological Park",
+  "note": "A 100-bed government hospital at Falaknuma Zoo Park, part of a ₹62 crore works package. The pin is the zoo entrance, the landmark for the site.",
+  "field": "The other new government beds in the old city, besides the Osmania project."
+ },
+ {
+  "id": "golconda-area",
+  "name": "Area Hospital Golconda",
+  "campus": "Golconda",
+  "seat": "karwan",
+  "serves": [
+   "karwan",
+   "rajendranagar",
+   "nampally"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency",
+   "women-child"
+  ],
+  "rank": 38,
+  "bestFor": "Government anchor, about 200 beds",
+  "lat": 17.385259,
+  "lng": 78.402608,
+  "address": "Fort Road, Golconda",
+  "note": "The government hospital for Karwan. About 200 beds. The higher private centres are Olive toward Tolichowki, then Apollo and CARE up the hill.",
+  "field": "Also on the TV9 list of ten government hospitals, together with Gandhi, Osmania, NIMS, Niloufer, Fever and King Koti."
+ },
+ {
+  "id": "mn-area-malakpet",
+  "name": "M.N. Area Hospital",
+  "campus": "Malakpet",
+  "seat": "malakpet",
+  "serves": [
+   "malakpet",
+   "amberpet",
+   "charminar"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency",
+   "women-child"
+  ],
+  "rank": 39,
+  "bestFor": "Government anchor for Malakpet",
+  "lat": 17.3727,
+  "lng": 78.4989,
+  "address": "Malakpet",
+  "note": "The government area hospital a short walk from Yashoda Malakpet. The hospital people in Malakpet and Chaderghat queue at."
+ },
+ {
+  "id": "nizamia",
+  "name": "Nizamia General Hospital",
+  "campus": "Charminar",
+  "seat": "yakutpura",
+  "serves": [
+   "charminar",
+   "yakutpura",
+   "goshamahal",
+   "bahadurpura"
+  ],
+  "tier": "public",
+  "focus": [
+   "women-child"
+  ],
+  "rank": 40,
+  "bestFor": "Unani and general, 180 beds",
+  "lat": 17.360362,
+  "lng": 78.475041,
+  "address": "Near Charminar",
+  "note": "Government Nizamia General Hospital, the Unani hospital, 180 beds, open since the Nizam’s time. It is the open government hospital near Charminar.",
+  "field": "The gate is a short walk from Charminar. This simplified boundary paints it inside Yakutpura, not the Charminar colour."
+ },
+ {
+  "id": "charminar-closed",
+  "name": "Charminar Government Hospital",
+  "campus": "Charminar",
+  "seat": "charminar",
+  "serves": [
+   "charminar"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 41,
+  "closed": true,
+  "bestFor": "Closed government hospital",
+  "lat": 17.3624,
+  "lng": 78.4732,
+  "address": "Charminar neighbourhood",
+  "note": "The Charminar government hospital is closed. Do not go here expecting a ward. Nizamia, nearby, is the open government hospital. The pin marks the neighbourhood."
+ },
+ {
+  "id": "fever-hospital",
+  "name": "Fever Hospital",
+  "campus": "Nallakunta",
+  "seat": "amberpet",
+  "serves": [
+   "amberpet",
+   "musheerabad",
+   "nampally"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 42,
+  "bestFor": "Infectious disease, government",
+  "lat": 17.395433,
+  "lng": 78.502482,
+  "address": "Nallakunta",
+  "note": "Sir Ronald Ross Institute of Tropical and Communicable Diseases, still called Fever Hospital. It sits in the Amberpet colour."
+ },
+ {
+  "id": "king-koti",
+  "name": "King Koti District Hospital",
+  "campus": "King Koti",
+  "seat": "goshamahal",
+  "serves": [
+   "goshamahal",
+   "nampally",
+   "khairatabad"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency",
+   "women-child"
+  ],
+  "rank": 43,
+  "bestFor": "District hospital, core city",
+  "lat": 17.393224,
+  "lng": 78.481999,
+  "address": "King Koti",
+  "note": "The district hospital at King Koti, on the TV9 government list. Inside the Goshamahal colour, north of the new Osmania site."
+ },
+ {
+  "id": "apollo-financial",
+  "name": "Apollo Hospitals",
+  "campus": "Financial District",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "rajendranagar",
+   "kukatpally"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "cancer",
+   "emergency"
+  ],
+  "rank": 44,
+  "project": true,
+  "bestFor": "New 400-bed campus, opened April 2026",
+  "lat": 17.416704,
+  "lng": 78.3548,
+  "address": "Nanakramguda, Financial District",
+  "note": "Apollo’s 400-bed Financial District hospital, opened 27 April 2026. A different campus from Jubilee Hills, which is the Apollo in the current leading set. Local comment on the opening was sharp about cost.",
+  "field": "Continental is the older Financial District hospital, a short drive west."
+ },
+ {
+  "id": "sindhu",
+  "name": "Sindhu Hospitals",
+  "campus": "HITEC City",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "kukatpally"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "cancer",
+   "emergency",
+   "transplant"
+  ],
+  "rank": 45,
+  "project": true,
+  "bestFor": "New cancer-focused hospital, 1,500 beds",
+  "lat": 17.4488,
+  "lng": 78.3788,
+  "address": "HITEC City",
+  "note": "Hetero’s Sindhu Hospital: about 1,500 beds, cancer-focused, 18 floors, at HITEC City. The pin is the HITEC City neighbourhood.",
+  "field": "The wider notes set it against AIIMS Bibinagar, which is outside these 23 seats and was still unfinished years after approval. Yashoda HITEC City is the established campus nearby."
+ },
+ {
+  "id": "tims-lb",
+  "name": "TIMS LB Nagar",
+  "campus": "LB Nagar",
+  "seat": "lb-nagar",
+  "serves": [
+   "lb-nagar",
+   "uppal",
+   "malakpet"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 46,
+  "project": true,
+  "phase": "building",
+  "bestFor": "Under construction — 9 Dec 2027",
+  "lat": 17.3602,
+  "lng": 78.5455,
+  "address": "LB Nagar — plot was never published",
+  "note": "The east TIMS. Aerials show a multi-storey frame with scaffolding and cranes. It is not a hospital you can use. The chief minister set completion for 9 December 2027, with Alwal, Warangal and the new Osmania.",
+  "facts": [
+   "Sanctioned around ₹900 crore. In 2023 the construction contract went to L&T, reported near ₹668 crore. Those are contract figures, not a count of beds in the ground.",
+   "This pin is the LB Nagar colour, not a construction gate. The notes never published a plot.",
+   "Until it opens, Kamineni under the flyover is the hospital the east of the city actually uses."
+  ],
+  "field": "Hyderabad East in the TIMS plan. One of four unfinished pieces of the 10,000-bed promise. Sanathnagar is the only TIMS already open."
+ },
+ {
+  "id": "apna-santosh",
+  "name": "Apna Multispeciality Hospital",
+  "campus": "Santosh Nagar",
+  "seat": "yakutpura",
+  "serves": [
+   "yakutpura",
+   "chandrayangutta"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 47,
+  "gapPin": true,
+  "bestFor": "Only private name in a seat with no government hospital",
+  "lat": 17.347712,
+  "lng": 78.50437,
+  "address": "Santosh Nagar",
+  "note": "A local private hospital at Santosh Nagar, not a large corporate campus. Owaisi at Kanchanbagh is the larger drive."
+ },
+ {
+  "id": "dharani",
+  "name": "Dharani Hospital",
+  "campus": "Tolichowki",
+  "seat": "nampally",
+  "serves": [
+   "karwan",
+   "nampally"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "women-child"
+  ],
+  "rank": 48,
+  "bestFor": "Private example named for Karwan",
+  "lat": 17.383703,
+  "lng": 78.436727,
+  "address": "Gudimalkapur Road, Tolichowki",
+  "note": "A private hospital beside Golconda Area Hospital. On this map the Gudimalkapur pin falls in the Nampally colour, not Karwan. Olive, on NH 163, is the other Tolichowki campus."
+ },
+ {
+  "id": "pulse",
+  "name": "Pulse Hospitals",
+  "campus": "CRPF Road",
+  "seat": "sanathnagar",
+  "serves": [
+   "musheerabad",
+   "sanathnagar",
+   "amberpet"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "heart"
+  ],
+  "rank": 49,
+  "bestFor": "Private example named for Musheerabad",
+  "lat": 17.421726,
+  "lng": 78.504133,
+  "address": "CRPF Road",
+  "note": "A private hospital beside Gandhi. This map puts both pins in the Sanathnagar colour."
+ },
+ {
+  "id": "navodaya",
+  "name": "Navodaya Hospitals",
+  "campus": "Paradise",
+  "seat": "secunderabad-cantonment",
+  "serves": [
+   "secunderabad-cantonment",
+   "secunderabad"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 50,
+  "bestFor": "Private example named for the cantonment",
+  "lat": 17.4423,
+  "lng": 78.4856,
+  "address": "Paradise Circle, PG Road",
+  "note": "A private hospital at Paradise, in the cantonment colour. Sunshine is on the same circle. For a larger case, Yashoda on Sarojini Devi Road or KIMS on Minister Road."
+ },
+ {
+  "id": "tims-alwal",
+  "name": "TIMS Alwal",
+  "campus": "Alwal",
+  "seat": "malkajgiri",
+  "serves": [
+   "malkajgiri",
+   "medchal",
+   "secunderabad",
+   "secunderabad-cantonment"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 51,
+  "project": true,
+  "phase": "building",
+  "bestFor": "North TIMS, still a site — Dec 2027",
+  "lat": 17.50764,
+  "lng": 78.51705,
+  "address": "Alwal / Rajiv Nagar — plus code GG58+3R3",
+  "note": "The north TIMS, on the Secunderabad side of the city. Foundation stone 2022, on about 28 acres, sanctioned near ₹897 crore. Not open. The chief minister set the same 9 December 2027 deadline as LB Nagar, Warangal and the new Osmania.",
+  "facts": [
+   "2023 construction contract went to DEC Infrastructure, reported near ₹669 crore against the ₹897 crore sanction.",
+   "The pin is a published plus code for a TIMS Alwal listing, inside the Malkajgiri colour. Alwal town and the railway station sit just south-west of this point.",
+   "Do not travel here expecting a ward. Area Hospital Malkajgiri is the open government hospital in this colour. Poulomi, Srikara and Tulasi, at AS Rao Nagar and ECIL, are the local private campuses — this map paints those gates in the Medchal colour."
+  ],
+  "field": "Alwal was missing from the earlier atlas because the notes never fixed a gate. It is inside these 23 colours — Malkajgiri — not outside the map."
+ },
+ {
+  "id": "tims-warangal",
+  "name": "Warangal Super Speciality",
+  "campus": "Warangal",
+  "seat": "warangal",
+  "serves": [],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 52,
+  "project": true,
+  "phase": "building",
+  "offMap": true,
+  "bestFor": "24-floor tower — not in Hyderabad",
+  "lat": 17.998,
+  "lng": 79.59,
+  "address": "Warangal — outside these 23 constituencies",
+  "note": "The fifth piece of the TIMS plan: a 24-floor super-specialty hospital in Warangal, still a concrete frame with a tower crane. Same 9 December 2027 deadline. It does not belong on the Hyderabad constituency map, so there is no pin.",
+  "facts": [
+   "The Hyderabad four are Sanathnagar (open), LB Nagar, Alwal and the new Osmania at Goshamahal. Warangal is the one outside the city.",
+   "Together with those four, this is the 10,000-bed promise. A city coordinate is not a gate, so directions search the name instead of dropping you on a guessed plot."
+  ],
+  "field": "Listed so the 4+1 plan is complete. Searching Warangal finds this card. The map will not fly there."
+ },
+ {
+  "id": "malla-reddy-narayana",
+  "name": "Malla Reddy Narayana Hospital",
+  "campus": "Suraram",
+  "seat": "quthbullapur",
+  "serves": [
+   "quthbullapur",
+   "medchal",
+   "kukatpally"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "emergency"
+  ],
+  "rank": 53,
+  "bestFor": "The large hospital for Suraram and Jeedimetla",
+  "lat": 17.54399,
+  "lng": 78.43338,
+  "address": "Suraram X Roads, Jeedimetla",
+  "note": "Malla Reddy Narayana Multispeciality Hospital, at Suraram X Roads. The referral campus for Quthbullapur: cardiac care, critical care and a wide multispecialty list. Public listings do not agree on the bed count — some say about 250, older profiles say about 600 — so this pin marks the campus, not a census.",
+  "field": "Inside the Quthbullapur colour. Medchal town and Kukatpally both use it when Secunderabad is the wrong direction."
+ },
+ {
+  "id": "slg",
+  "name": "SLG Hospitals",
+  "campus": "Bachupally",
+  "seat": "quthbullapur",
+  "serves": [
+   "quthbullapur",
+   "kukatpally",
+   "serilingampally",
+   "medchal"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "cancer",
+   "neuro",
+   "emergency"
+  ],
+  "rank": 54,
+  "bestFor": "North-west multispecialty, Nizampet Road",
+  "lat": 17.52817,
+  "lng": 78.36259,
+  "address": "Nizampet Road, Bachupally",
+  "note": "SLG Hospitals, opened in 2019 on Nizampet Road at Bachupally. NABH-accredited. Cardiac, neuro, cancer, renal and emergency care for Bachupally, Nizampet and Miyapur.",
+  "field": "The pin is in the Quthbullapur colour. Kukatpally and the Miyapur side of Serilingampally are who it serves."
+ },
+ {
+  "id": "omni-kukatpally",
+  "name": "OMNI Hospitals",
+  "campus": "Kukatpally",
+  "seat": "kukatpally",
+  "serves": [
+   "kukatpally",
+   "serilingampally",
+   "sanathnagar"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "heart",
+   "emergency",
+   "women-child"
+  ],
+  "rank": 55,
+  "bestFor": "Multispecialty on the Kukatpally highway",
+  "lat": 17.48538,
+  "lng": 78.41096,
+  "address": "Balaji Nagar, Mumbai Highway, Kukatpally",
+  "note": "OMNI Hospitals, Kukatpally, on the Mumbai highway at Balaji Nagar. About 150 beds, NABH-accredited, more than 30 specialties. This is the multispecialty that actually sits inside the Kukatpally colour.",
+  "field": "KPHB’s larger private campuses — Prasad, Ankura, Rainbow Hydernagar — fall next door, in the Serilingampally colour, because this map paints KPHB that way."
+ },
+ {
+  "id": "prasad-kphb",
+  "name": "Prasad Hospital",
+  "campus": "KPHB",
+  "seat": "serilingampally",
+  "serves": [
+   "kukatpally",
+   "serilingampally"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "heart"
+  ],
+  "rank": 56,
+  "bestFor": "KPHB multispecialty, about 130 beds",
+  "lat": 17.49206,
+  "lng": 78.40156,
+  "address": "MIG Road No. 1, KPHB Colony",
+  "note": "Prasad Hospital, KPHB, opposite Sitara Grand. About 130 beds. A NABH-accredited multispecialty for Kukatpally Housing Board Colony.",
+  "field": "People call this Kukatpally. On this map the KPHB pin falls in the Serilingampally colour."
+ },
+ {
+  "id": "russh",
+  "name": "Russh Super Speciality",
+  "campus": "Suchitra",
+  "seat": "quthbullapur",
+  "serves": [
+   "quthbullapur",
+   "medchal",
+   "malkajgiri"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "heart"
+  ],
+  "rank": 57,
+  "bestFor": "Suchitra and Kompally, on NH 44",
+  "lat": 17.49977,
+  "lng": 78.4775,
+  "address": "NH 44, Suchitra Circle",
+  "note": "Russh Super Speciality Hospital at Suchitra, on the Medchal highway. About 150 beds. The hospital Kompally, Suchitra and the Medchal approach use before driving on to Secunderabad.",
+  "field": "Inside the Quthbullapur colour, on the Medchal side of Suchitra."
+ },
+ {
+  "id": "poulomi",
+  "name": "Poulomi Hospitals",
+  "campus": "AS Rao Nagar",
+  "seat": "medchal",
+  "serves": [
+   "medchal",
+   "malkajgiri",
+   "uppal"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "heart",
+   "emergency",
+   "women-child"
+  ],
+  "rank": 58,
+  "bestFor": "The hospital for AS Rao Nagar and ECIL",
+  "lat": 17.48261,
+  "lng": 78.5529,
+  "address": "Dr AS Rao Nagar Road, Rukminipuri Colony",
+  "phone": "040-27145555",
+  "note": "Gemcare Poulomi Hospitals, AS Rao Nagar. About 160 beds. Cardiology, neuro, nephrology and obstetrics for ECIL, AS Rao Nagar and Malkajgiri.",
+  "field": "Residents call this the Malkajgiri–ECIL belt. On this simplified map the gate falls in the Medchal colour, not Malkajgiri."
+ },
+ {
+  "id": "srikara-ecil",
+  "name": "Srikara Hospitals",
+  "campus": "ECIL",
+  "seat": "medchal",
+  "serves": [
+   "medchal",
+   "malkajgiri",
+   "uppal"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 59,
+  "bestFor": "ECIL cross roads, orthopaedics and emergency",
+  "lat": 17.47494,
+  "lng": 78.56802,
+  "address": "ECIL Cross Roads, Moula Ali",
+  "note": "Srikara Hospitals at the ECIL cross roads. About 100 beds, opened in 2013, used for orthopaedics and general multispecialty care by ECIL and Moula Ali.",
+  "field": "Same boundary note as Poulomi: the ECIL gate is in the Medchal colour on this map. There is a separate Srikara campus at Miyapur; this pin is ECIL."
+ },
+ {
+  "id": "tulasi-kushaiguda",
+  "name": "Tulasi Hospitals",
+  "campus": "Kushaiguda",
+  "seat": "medchal",
+  "serves": [
+   "medchal",
+   "malkajgiri",
+   "uppal"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 60,
+  "bestFor": "Kushaiguda multispecialty",
+  "lat": 17.47488,
+  "lng": 78.57094,
+  "address": "Electronic Complex, Kushaiguda",
+  "note": "Tulasi Hospitals, Kushaiguda, beside the ECIL electronics complex. A multispecialty for Kushaiguda and ECIL. Listings put the bed count near 300; that figure is a directory claim, not a ward-by-ward count.",
+  "field": "A short walk from Srikara at the ECIL cross roads, and in the same Medchal colour on this map."
+ },
+ {
+  "id": "rainbow-hydernagar",
+  "name": "Rainbow Children's Hospital",
+  "campus": "Hydernagar",
+  "seat": "serilingampally",
+  "serves": [
+   "kukatpally",
+   "serilingampally",
+   "quthbullapur"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "women-child"
+  ],
+  "rank": 61,
+  "bestFor": "Children and childbirth for Kukatpally",
+  "lat": 17.49979,
+  "lng": 78.38415,
+  "address": "Nizampet–Miyapur Road, Hydernagar",
+  "note": "Rainbow’s Hydernagar campus, the one Kukatpally and Miyapur use for children and childbirth. The Banjara Hills campus is a separate pin.",
+  "field": "Hydernagar is spoken of as Kukatpally. This map’s colour is Serilingampally."
+ },
+ {
+  "id": "ankura-kphb",
+  "name": "Ankura Hospital",
+  "campus": "KPHB",
+  "seat": "serilingampally",
+  "serves": [
+   "kukatpally",
+   "serilingampally"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "women-child"
+  ],
+  "rank": 62,
+  "bestFor": "Women and children, KPHB",
+  "lat": 17.473,
+  "lng": 78.38721,
+  "address": "HITEC City–Kukatpally Road, KPHB",
+  "note": "Ankura Hospital for women and children, on the Kukatpally–HITEC City road. The maternity and paediatric campus for KPHB. Fernandez and Rainbow Banjara Hills are the central campuses; this is the north-west one."
+ },
+ {
+  "id": "omega",
+  "name": "Omega Hospitals",
+  "campus": "Banjara Hills",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "jubilee-hills",
+   "nampally",
+   "karwan"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "cancer"
+  ],
+  "rank": 63,
+  "bestFor": "Private cancer hospital, Banjara Hills",
+  "lat": 17.41359,
+  "lng": 78.42402,
+  "address": "Banjara Hills",
+  "note": "Omega Hospitals, a private cancer campus in Banjara Hills. Separate from Basavatarakam Indo-American, which is the other cancer hospital in this colour, and from MNJ, the government cancer hospital at Red Hills."
+ },
+ {
+  "id": "arete",
+  "name": "Arete Hospitals",
+  "campus": "Gachibowli",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "kukatpally",
+   "rajendranagar"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "emergency"
+  ],
+  "rank": 64,
+  "bestFor": "Newer Gachibowli multispecialty",
+  "lat": 17.42767,
+  "lng": 78.37491,
+  "address": "Gachibowli",
+  "note": "Arete Hospitals, Gachibowli. A newer multispecialty campus on the west side, used alongside AIG and Continental. This pin is the hospital gate as mapped, not a bed-count claim."
+ },
+ {
+  "id": "area-malkajgiri",
+  "name": "Area Hospital Malkajgiri",
+  "campus": "Malkajgiri",
+  "seat": "malkajgiri",
+  "serves": [
+   "malkajgiri",
+   "medchal",
+   "secunderabad"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency",
+   "women-child"
+  ],
+  "rank": 65,
+  "bestFor": "Government hospital inside Malkajgiri",
+  "lat": 17.45048,
+  "lng": 78.53212,
+  "address": "Malkajgiri",
+  "note": "The area hospital in Malkajgiri. This is the open government campus in the colour. TIMS Alwal, further north, is still a construction site and is not a place to go for a ward.",
+  "field": "For a larger private case, Poulomi at AS Rao Nagar and Srikara at ECIL are the neighbourhood hospitals. On this map those two gates fall in the Medchal colour. Yashoda Secunderabad remains the big campus to the south."
+ },
+ {
+  "id": "chc-medchal",
+  "name": "Community Health Centre",
+  "campus": "Medchal",
+  "seat": "medchal",
+  "serves": [
+   "medchal"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 66,
+  "bestFor": "Government centre in Medchal town",
+  "lat": 17.63972,
+  "lng": 78.47397,
+  "address": "Medchal town",
+  "note": "The community health centre at Medchal town. It is a government clinic for the town, not a super-specialty hospital. A serious case from here goes to Russh at Suchitra, Malla Reddy Narayana at Suraram, or on to Secunderabad.",
+  "field": "The only government pin in the far north of this colour. The multi-specialty campuses people mean by ‘Medchal side’ — Poulomi, Srikara, Tulasi — are at ECIL, in the south of the same colour. This coordinate matches the GHMC health-facility layer."
+ },
+ {
+  "id": "ent-koti",
+  "name": "Government ENT Hospital",
+  "campus": "Koti",
+  "seat": "goshamahal",
+  "serves": [
+   "goshamahal",
+   "charminar",
+   "nampally",
+   "khairatabad"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 67,
+  "bestFor": "Government ear, nose and throat hospital",
+  "lat": 17.3844,
+  "lng": 78.482,
+  "address": "Koti",
+  "note": "Government ENT Hospital, Koti. The public ear, nose and throat hospital for the core city. The coordinate matches both the GHMC health-facility layer and the mapped gate."
+ },
+ {
+  "id": "dental-afzalgunj",
+  "name": "Government Dental College",
+  "campus": "Afzal Gunj",
+  "seat": "charminar",
+  "serves": [
+   "charminar",
+   "goshamahal",
+   "yakutpura",
+   "nampally"
+  ],
+  "tier": "public",
+  "focus": [],
+  "rank": 68,
+  "bestFor": "Government dental hospital",
+  "lat": 17.371986,
+  "lng": 78.471798,
+  "address": "Afzal Gunj",
+  "note": "Government Dental College and Hospital, beside Osmania General at Afzal Gunj. A teaching dental hospital, not a general emergency ward. Coordinate from the GHMC health-facility layer, a short walk from today’s Osmania."
+ },
+ {
+  "id": "chc-amberpet",
+  "name": "Community Health Centre",
+  "campus": "Amberpet",
+  "seat": "amberpet",
+  "serves": [
+   "amberpet",
+   "musheerabad",
+   "malakpet"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 69,
+  "bestFor": "Government community centre, Amberpet",
+  "lat": 17.39229,
+  "lng": 78.519316,
+  "address": "Amberpet",
+  "note": "The community health centre for Amberpet, from the GHMC health-facility layer. Fever Hospital at Nallakunta is the larger public campus in this colour. This centre is the local government clinic, not a super-specialty."
+ },
+ {
+  "id": "chc-jangammet",
+  "name": "Community Health Centre",
+  "campus": "Jangammet",
+  "seat": "chandrayangutta",
+  "serves": [
+   "chandrayangutta",
+   "charminar",
+   "bahadurpura"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 70,
+  "bestFor": "Government community centre, Jangammet",
+  "lat": 17.33425,
+  "lng": 78.46987,
+  "address": "Jangammet",
+  "note": "Community health centre at Jangammet, in the Chandrayangutta colour. A local government clinic. Owaisi at Kanchanbagh remains the large hospital for this side of the city. Coordinate from the Telangana health-centre file."
+ },
+ {
+  "id": "chc-dabirpura",
+  "name": "Community Health Centre",
+  "campus": "Dabirpura",
+  "seat": "yakutpura",
+  "serves": [
+   "yakutpura",
+   "charminar",
+   "bahadurpura"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 71,
+  "bestFor": "Government community centre, Dabirpura",
+  "lat": 17.36559,
+  "lng": 78.48567,
+  "address": "Dabirpura",
+  "note": "Community health centre, Dabirpura. A local government clinic in the old city. The health-centre file places the gate in the Yakutpura colour. Nizamia is the larger public hospital nearby."
+ },
+ {
+  "id": "surajbhan-maternity",
+  "name": "Surajbhan Baghvathi Maternity",
+  "campus": "Old city",
+  "seat": "charminar",
+  "serves": [
+   "charminar",
+   "yakutpura",
+   "goshamahal",
+   "bahadurpura"
+  ],
+  "tier": "public",
+  "focus": [
+   "women-child"
+  ],
+  "rank": 72,
+  "bestFor": "Government maternity hospital, old city",
+  "lat": 17.36951,
+  "lng": 78.47638,
+  "address": "Old city",
+  "note": "Surajbhan Baghvathi Maternity Hospital, listed in the health-centre file as a community health centre. A government maternity hospital in the Charminar colour, separate from Petlaburj, Niloufer and Fernandez."
+ },
+ {
+  "id": "imh-erragadda",
+  "name": "Institute of Mental Health",
+  "campus": "Erragadda",
+  "seat": "jubilee-hills",
+  "serves": [
+   "jubilee-hills",
+   "sanathnagar",
+   "kukatpally",
+   "khairatabad"
+  ],
+  "tier": "public",
+  "focus": [],
+  "rank": 73,
+  "bestFor": "Government psychiatric hospital",
+  "lat": 17.45028,
+  "lng": 78.43595,
+  "address": "Erragadda",
+  "note": "Institute of Mental Health, Erragadda. The government psychiatric hospital. The GHMC layer plots this campus near Secunderabad, which does not match the Erragadda gate, so this pin uses the mapped Erragadda campus instead.",
+  "field": "Erragadda sits in the Jubilee Hills colour on this simplified map, the same way TIMS Sanathnagar does."
+ },
+ {
+  "id": "rvm-laxmakkapally",
+  "name": "RVM Institute of Medical Sciences",
+  "campus": "Laxmakkapally",
+  "seat": "medchal",
+  "serves": [
+   "medchal"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency",
+   "women-child"
+  ],
+  "rank": 74,
+  "bestFor": "Charitable teaching hospital past Shamirpet",
+  "lat": 17.718161,
+  "lng": 78.614338,
+  "address": "Laxmakkapally, Mulugu mandal, Siddipet district",
+  "phone": "08454-244344",
+  "caution": "Not a government hospital. It is run by RVM Charitable Trust. Low-cost wards are why it is often treated as a public hospital.",
+  "note": "RVM Institute of Medical Sciences and Research Centre, Laxmakkapally village, Mulugu mandal, Siddipet district, pin 502279. A private teaching hospital of the RVM Charitable Trust, permitted from 2016, on the highway past Shamirpet. It is the large multi-specialty campus for the villages north of Medchal. National Medical Commission lists it as non-government.",
+  "field": "The campus is outside these 23 colours. The pin sits north of the Medchal seat, not inside it. Medchal is the constituency that uses it."
+ },
+ {
+  "id": "area-nampally",
+  "name": "Area Hospital Nampally",
+  "campus": "Nampally",
+  "seat": "nampally",
+  "serves": [
+   "nampally",
+   "goshamahal",
+   "karwan"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 75,
+  "bestFor": "Government area hospital, Nampally",
+  "lat": 17.39227,
+  "lng": 78.46329,
+  "address": "Nampally",
+  "note": "Area Hospital, Nampally, from the Telangana health-centre file. The government area hospital in this colour. Niloufer and MNJ, both at Red Hills, are the specialist hospitals beside it."
+ },
+ {
+  "id": "area-kondapur",
+  "name": "Area Hospital Kondapur",
+  "campus": "Kondapur",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "kukatpally",
+   "quthbullapur"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency",
+   "women-child"
+  ],
+  "rank": 76,
+  "bestFor": "Government area hospital, Kondapur",
+  "lat": 17.46302,
+  "lng": 78.35322,
+  "address": "Kondapur",
+  "note": "Area Hospital, Kondapur, from the Telangana health-centre file. The government hospital on the west side. KIMS Kondapur is the large private campus nearby."
+ },
+ {
+  "id": "petlaburj",
+  "name": "Government Maternity Hospital",
+  "campus": "Petlaburj",
+  "seat": "charminar",
+  "serves": [
+   "charminar",
+   "goshamahal",
+   "yakutpura",
+   "nampally"
+  ],
+  "tier": "public",
+  "focus": [
+   "women-child"
+  ],
+  "rank": 77,
+  "bestFor": "Government maternity hospital, Petlaburj",
+  "lat": 17.36834,
+  "lng": 78.46725,
+  "address": "Petlaburj",
+  "note": "MG Government Maternity Hospital, Petlaburj. The old-city government maternity hospital. An earlier government map put this campus far east of the city. This coordinate is the one in the health-centre file, inside the Charminar colour."
+ },
+ {
+  "id": "chc-sitaphalmandi",
+  "name": "Community Health Centre",
+  "campus": "Sitaphalmandi",
+  "seat": "secunderabad",
+  "serves": [
+   "secunderabad",
+   "secunderabad-cantonment",
+   "malkajgiri"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 78,
+  "bestFor": "Government community centre, Sitaphalmandi",
+  "lat": 17.42679,
+  "lng": 78.51932,
+  "address": "Sitaphalmandi",
+  "note": "Community health centre, Sitaphalmandi, from the health-centre file. The government clinic inside the Secunderabad colour. The large Secunderabad hospitals — Yashoda, KIMS, Sunshine — sit next door, in the cantonment colour."
+ },
+ {
+  "id": "chc-lalapet",
+  "name": "Community Health Centre",
+  "campus": "Lalapet",
+  "seat": "malkajgiri",
+  "serves": [
+   "malkajgiri",
+   "amberpet",
+   "uppal"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 79,
+  "bestFor": "Government community centre, Lalapet",
+  "lat": 17.43886,
+  "lng": 78.5416,
+  "address": "Lalapet",
+  "note": "Community health centre, Lalapet. A local government clinic in the Malkajgiri colour. Area Hospital Malkajgiri is the larger public campus nearby."
+ },
+ {
+  "id": "chc-rajendranagar",
+  "name": "Community Health Centre",
+  "campus": "Rajendranagar",
+  "seat": "rajendranagar",
+  "serves": [
+   "rajendranagar",
+   "karwan"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 80,
+  "bestFor": "Government community centre, Rajendranagar",
+  "lat": 17.32034,
+  "lng": 78.4018,
+  "address": "Rajendranagar",
+  "note": "Community health centre, Rajendranagar, from the health-centre file. The government clinic inside this wide seat. There is still no large private flagship in the colour."
+ },
+ {
+  "id": "chc-ghatkesar",
+  "name": "Community Health Centre",
+  "campus": "Ghatkesar",
+  "seat": "medchal",
+  "serves": [
+   "medchal",
+   "uppal"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 81,
+  "bestFor": "Government community centre, Ghatkesar",
+  "lat": 17.45023,
+  "lng": 78.683,
+  "address": "Ghatkesar",
+  "note": "Community health centre, Ghatkesar. East of the city, on the edge of the Medchal colour on this map. A local government clinic, not a city hospital."
+ },
+ {
+  "id": "phc-shamirpet",
+  "name": "Primary Health Centre",
+  "campus": "Shamirpet",
+  "seat": "medchal",
+  "serves": [
+   "medchal"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 82,
+  "bestFor": "Government primary centre, Shamirpet",
+  "lat": 17.59354,
+  "lng": 78.57015,
+  "address": "Shamirpet",
+  "note": "Primary health centre, Shamirpet. The government clinic on the road north, before RVM at Laxmakkapally. Not a multi-specialty hospital."
+ },
+ {
+  "id": "phc-alwal",
+  "name": "Primary Health Centre",
+  "campus": "Alwal",
+  "seat": "malkajgiri",
+  "serves": [
+   "malkajgiri"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 83,
+  "bestFor": "Government primary centre, Alwal",
+  "lat": 17.5063,
+  "lng": 78.50411,
+  "address": "Alwal",
+  "note": "Primary health centre, Alwal. The open government clinic while TIMS Alwal is still a construction site."
+ },
+ {
+  "id": "phc-uppal",
+  "name": "Primary Health Centre",
+  "campus": "Uppal",
+  "seat": "uppal",
+  "serves": [
+   "uppal",
+   "lb-nagar",
+   "malkajgiri"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 84,
+  "bestFor": "Government primary centre, Uppal",
+  "lat": 17.40251,
+  "lng": 78.56123,
+  "address": "Uppal",
+  "note": "Primary health centre, Uppal. The government clinic inside this colour. Kamineni at LB Nagar is the large hospital to the south."
+ },
+ {
+  "id": "phc-kushaiguda",
+  "name": "Primary Health Centre",
+  "campus": "Kushaiguda",
+  "seat": "medchal",
+  "serves": [
+   "medchal",
+   "malkajgiri"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 85,
+  "bestFor": "Government primary centre, Kushaiguda",
+  "lat": 17.48254,
+  "lng": 78.56909,
+  "address": "Kushaiguda",
+  "note": "Primary health centre, Kushaiguda. The government clinic beside Tulasi and Srikara at the ECIL end of the Medchal colour."
+ },
+ {
+  "id": "phc-jawaharnagar",
+  "name": "Primary Health Centre",
+  "campus": "Jawaharnagar",
+  "seat": "medchal",
+  "serves": [
+   "medchal"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 86,
+  "bestFor": "Government primary centre, Jawaharnagar",
+  "lat": 17.51136,
+  "lng": 78.55991,
+  "address": "Jawaharnagar",
+  "note": "Primary health centre, Jawaharnagar, from the health-centre file. A local government clinic north-east of the city."
+ },
+ {
+  "id": "phc-keesara",
+  "name": "Primary Health Centre",
+  "campus": "Keesara",
+  "seat": "medchal",
+  "serves": [
+   "medchal"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 87,
+  "bestFor": "Government primary centre, Keesara",
+  "lat": 17.52309,
+  "lng": 78.65854,
+  "address": "Keesara",
+  "note": "Primary health centre, Keesara. East of ECIL, inside the Medchal colour on this map. A local government clinic."
+ },
+ {
+  "id": "phc-malkajgiri",
+  "name": "Primary Health Centre",
+  "campus": "Malkajgiri",
+  "seat": "malkajgiri",
+  "serves": [
+   "malkajgiri"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 88,
+  "bestFor": "Government primary centre, Malkajgiri",
+  "lat": 17.45774,
+  "lng": 78.53752,
+  "address": "Malkajgiri",
+  "note": "Primary health centre, Malkajgiri urban. Separate from Area Hospital Malkajgiri, which is the larger public campus in the same colour."
+ },
+ {
+  "id": "phc-myladeverpally",
+  "name": "Primary Health Centre",
+  "campus": "Myladeverpally",
+  "seat": "rajendranagar",
+  "serves": [
+   "rajendranagar"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 89,
+  "bestFor": "Government primary centre, Myladeverpally",
+  "lat": 17.3185,
+  "lng": 78.45168,
+  "address": "Myladeverpally",
+  "note": "Primary health centre, Myladeverpally, in the Rajendranagar colour. A local government clinic in the south of the city."
+ },
+ {
+  "id": "phc-narkuda",
+  "name": "Primary Health Centre",
+  "campus": "Narkuda",
+  "seat": "rajendranagar",
+  "serves": [
+   "rajendranagar"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 90,
+  "bestFor": "Government primary centre, Narkuda",
+  "lat": 17.25761,
+  "lng": 78.33444,
+  "address": "Narkuda",
+  "note": "Primary health centre, Narkuda. A rural government clinic in the south of the Rajendranagar colour, toward Shamshabad."
+ },
+ {
+  "id": "phc-peddashapur",
+  "name": "Primary Health Centre",
+  "campus": "Peddashapur",
+  "seat": "rajendranagar",
+  "serves": [
+   "rajendranagar"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 91,
+  "bestFor": "Government primary centre, Peddashapur",
+  "lat": 17.21855,
+  "lng": 78.33558,
+  "address": "Peddashapur",
+  "note": "Primary health centre, Peddashapur. The southern government clinic in this colour. Not a city hospital."
+ },
+ {
+  "id": "sarojini-devi",
+  "name": "Sarojini Devi Eye Hospital",
+  "campus": "Mehdipatnam",
+  "seat": "nampally",
+  "serves": [
+   "nampally",
+   "karwan",
+   "goshamahal"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 92,
+  "bestFor": "Government eye hospital",
+  "lat": 17.39879,
+  "lng": 78.44338,
+  "address": "Humayun Nagar, Mehdipatnam",
+  "note": "Sarojini Devi Eye Hospital, Mehdipatnam. The government eye hospital. An earlier facilities file plotted it near Musheerabad. This pin is the Humayun Nagar gate."
+ },
+ {
+  "id": "esi-nacharam",
+  "name": "ESI Hospital",
+  "campus": "Nacharam",
+  "seat": "uppal",
+  "serves": [
+   "uppal",
+   "malkajgiri",
+   "lb-nagar"
+  ],
+  "tier": "public",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 93,
+  "bestFor": "Employees' State Insurance hospital, Nacharam",
+  "lat": 17.43191,
+  "lng": 78.55193,
+  "address": "Nacharam",
+  "note": "ESI Hospital, Nacharam. A government hospital for insured workers, separate from ESIC at Sanathnagar. On this map the gate falls in the Uppal colour."
+ },
+ {
+  "id": "apollo-sec",
+  "name": "Apollo Hospitals",
+  "campus": "Secunderabad",
+  "seat": "secunderabad-cantonment",
+  "serves": [
+   "secunderabad-cantonment",
+   "secunderabad",
+   "malkajgiri"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "emergency"
+  ],
+  "rank": 94,
+  "bestFor": "Corporate hospital, Secunderabad",
+  "lat": 17.43957,
+  "lng": 78.5047,
+  "address": "St John's Road, Secunderabad",
+  "note": "Apollo Hospitals, St John's Road, Secunderabad. A corporate campus, separate from Apollo Jubilee Hills, Apollo Financial District and Apollo DRDO."
+ },
+ {
+  "id": "care-nampally",
+  "name": "CARE Hospitals",
+  "campus": "Nampally",
+  "seat": "goshamahal",
+  "serves": [
+   "goshamahal",
+   "nampally",
+   "charminar"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "emergency"
+  ],
+  "rank": 95,
+  "bestFor": "Corporate hospital, Nampally",
+  "lat": 17.38543,
+  "lng": 78.47471,
+  "address": "Mukarramjahi Road, Nampally",
+  "note": "CARE Hospitals, Nampally. The same corporate group as CARE Banjara Hills. On this map the gate falls in the Goshamahal colour, on the Nampally edge."
+ },
+ {
+  "id": "care-gachibowli",
+  "name": "CARE Hospitals",
+  "campus": "Gachibowli",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "jubilee-hills"
+  ],
+  "tier": "flagship",
+  "focus": [
+   "heart",
+   "emergency"
+  ],
+  "rank": 96,
+  "bestFor": "Corporate hospital, Gachibowli",
+  "lat": 17.43041,
+  "lng": 78.37071,
+  "address": "Gachibowli",
+  "note": "CARE Hospitals, Gachibowli, on the old Mumbai highway. A corporate campus of the CARE group."
+ },
+ {
+  "id": "rainbow-sec",
+  "name": "Rainbow Children's Hospital",
+  "campus": "Secunderabad",
+  "seat": "secunderabad-cantonment",
+  "serves": [
+   "secunderabad-cantonment",
+   "secunderabad",
+   "malkajgiri"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "women-child",
+   "emergency"
+  ],
+  "rank": 97,
+  "bestFor": "Corporate children's hospital, Secunderabad",
+  "lat": 17.45572,
+  "lng": 78.49928,
+  "address": "Vikrampuri, Secunderabad",
+  "note": "Rainbow Children's Hospital, Vikrampuri, Secunderabad. The same corporate group as Rainbow Banjara Hills and Rainbow Hydernagar."
+ },
+ {
+  "id": "lv-prasad",
+  "name": "L V Prasad Eye Institute",
+  "campus": "Banjara Hills",
+  "seat": "khairatabad",
+  "serves": [
+   "khairatabad",
+   "jubilee-hills",
+   "nampally"
+  ],
+  "tier": "specialty",
+  "focus": [],
+  "rank": 98,
+  "bestFor": "Charitable eye hospital",
+  "lat": 17.4235,
+  "lng": 78.42761,
+  "address": "L V Prasad Marg, Banjara Hills",
+  "note": "L V Prasad Eye Institute, Banjara Hills. A not-for-profit eye hospital. It is not a government hospital and not a corporate chain."
+ },
+ {
+  "id": "mahavir",
+  "name": "Mahavir Hospital",
+  "campus": "AC Guards",
+  "seat": "nampally",
+  "serves": [
+   "nampally",
+   "khairatabad",
+   "goshamahal"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 99,
+  "bestFor": "Charitable hospital, AC Guards",
+  "lat": 17.40366,
+  "lng": 78.45706,
+  "address": "AC Guards, Masab Tank",
+  "note": "Mahavir Hospital and Research Centre, AC Guards. A charitable trust hospital. Low-cost wards are why people sometimes treat it as a public hospital. It is not run by the government."
+ },
+ {
+  "id": "durgabai",
+  "name": "Durgabai Deshmukh Hospital",
+  "campus": "Vidyanagar",
+  "seat": "musheerabad",
+  "serves": [
+   "musheerabad",
+   "amberpet",
+   "nampally"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "women-child",
+   "emergency"
+  ],
+  "rank": 100,
+  "bestFor": "Charitable hospital, Vidyanagar",
+  "lat": 17.40204,
+  "lng": 78.51028,
+  "address": "Vidyanagar",
+  "note": "Durgabai Deshmukh Hospital and Research Centre, Vidyanagar. Run by the Andhra Mahila Sabha. A charitable hospital, not a government one."
+ },
+ {
+  "id": "st-theresa",
+  "name": "St Theresa's Hospital",
+  "campus": "Sanathnagar",
+  "seat": "jubilee-hills",
+  "serves": [
+   "jubilee-hills",
+   "kukatpally",
+   "sanathnagar"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 101,
+  "bestFor": "Mission hospital, Sanathnagar",
+  "lat": 17.45185,
+  "lng": 78.43781,
+  "address": "Sanathnagar",
+  "note": "St Theresa's Hospital, Sanathnagar. A mission hospital. On this map Sanathnagar falls in the Jubilee Hills colour, the same stretch as TIMS and the Institute of Mental Health."
+ },
+ {
+  "id": "mediciti",
+  "name": "MediCiti Hospital",
+  "campus": "Shamirpet",
+  "seat": "medchal",
+  "serves": [
+   "medchal"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 102,
+  "bestFor": "Teaching hospital, Shamirpet",
+  "lat": 17.61638,
+  "lng": 78.54838,
+  "address": "Ghanpur, Shamirpet",
+  "note": "MediCiti Hospital, Ghanpur, Shamirpet. A teaching hospital north of the city, in the Medchal colour. It is not a government hospital. RVM, further out, is the other teaching campus on this road."
+ },
+ {
+  "id": "mh-secunderabad",
+  "name": "Military Hospital",
+  "campus": "Trimulgherry",
+  "seat": "malkajgiri",
+  "serves": [
+   "malkajgiri",
+   "secunderabad-cantonment",
+   "secunderabad"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 103,
+  "bestFor": "Army hospital, Secunderabad",
+  "lat": 17.47228,
+  "lng": 78.51703,
+  "address": "Trimulgherry, Secunderabad",
+  "note": "Military Hospital, Trimulgherry. An army hospital for defence personnel and their families. Not a hospital the general public walks into. This map paints Trimulgherry in the Malkajgiri colour."
+ },
+ {
+  "id": "af-dundigal",
+  "name": "Air Force Academy Hospital",
+  "campus": "Dundigal",
+  "seat": "medchal",
+  "serves": [
+   "medchal",
+   "quthbullapur"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 104,
+  "bestFor": "Air Force hospital, Dundigal",
+  "lat": 17.64851,
+  "lng": 78.39441,
+  "address": "Dundigal",
+  "note": "Air Force Academy Hospital, Dundigal. A defence hospital inside the Medchal colour. Not open as a public hospital."
+ },
+ {
+  "id": "pace-hitec",
+  "name": "Pace Hospitals",
+  "campus": "HITEC City",
+  "seat": "serilingampally",
+  "serves": [
+   "serilingampally",
+   "jubilee-hills"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 105,
+  "bestFor": "Mid-size hospital, HITEC City",
+  "lat": 17.44676,
+  "lng": 78.38406,
+  "address": "HITEC City",
+  "note": "Pace Hospitals, HITEC City. A mid-size private hospital, not one of the large corporate chains."
+ },
+ {
+  "id": "ozone-kothapet",
+  "name": "Ozone Hospitals",
+  "campus": "Kothapet",
+  "seat": "lb-nagar",
+  "serves": [
+   "lb-nagar",
+   "malakpet",
+   "uppal"
+  ],
+  "tier": "specialty",
+  "focus": [
+   "emergency"
+  ],
+  "rank": 106,
+  "bestFor": "Mid-size hospital, Kothapet",
+  "lat": 17.35943,
+  "lng": 78.54507,
+  "address": "Kothapet",
+  "note": "Ozone Hospitals, Kothapet. A mid-size private hospital in the LB Nagar colour. Kamineni is the large hospital nearby."
+ }
+]

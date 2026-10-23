@@ -1,7 +1,5 @@
 # Hyderabad Healthcare
 
-A map of Greater Hyderabad's 23 assembly constituencies with the hospitals and government clinics that serve each one. Rebuilt from the public site at https://hydshealthcare.auka.ai/.
-
 **Live:** https://naveen-git-platform.github.io/hospital_map/
 
 ## Run

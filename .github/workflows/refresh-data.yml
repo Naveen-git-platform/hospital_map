@@ -1,0 +1,32 @@
+name: Refresh facility data
+
+# Re-downloads OpenStreetMap facilities, rebuilds src/generated/ and opens a PR to review.
+on:
+  schedule:
+    - cron: "30 2 1 * *" # 02:30 UTC on the 1st of every month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: node scripts/data/osm.mjs
+      - run: node scripts/data/build.mjs --check
+      - uses: peter-evans/create-pull-request@v7
+        with:
+          branch: data-refresh
+          commit-message: "Refresh facility data from OpenStreetMap"
+          title: "Refresh facility data"
+          body: |
+            Monthly refresh of OpenStreetMap health facilities. Check the counts in `src/generated/meta.json` before merging.
+          add-paths: src/generated/

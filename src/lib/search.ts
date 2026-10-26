@@ -22,7 +22,7 @@ export function initSearch() {
     campus: h.campus,
     bestFor: h.bestFor,
     area: `${getSeat(h.seat)?.name ?? ""} ${SEAT_GUIDES[h.seat]?.places ?? ""}`,
-    extra: [h.address, h.note ?? "", ...(h.facts ?? [])].join(" "),
+    extra: [h.address, h.note ?? "", h.field ?? "", ...(h.facts ?? [])].join(" "),
   }));
   worker.postMessage({ type: "init", docs } satisfies SearchRequest);
 }

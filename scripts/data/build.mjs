@@ -57,6 +57,7 @@ function nearestSeat(lng, lat) {
 }
 
 const locate = (lng, lat) => seatAt(lng, lat) ?? nearestSeat(lng, lat);
+const seatIds = new Set(seats.map((s) => s.id));
 
 // ---------------------------------------------------------------------------
 // Name matching for de-duplication
@@ -375,7 +376,9 @@ for (const f of [...curated, ...govt, ...osm]) {
     facilities.push(f);
     continue;
   }
-  const seat = locate(f.lng, f.lat);
+  // Curated seats were assigned by hand from the hospital's gate; keep them when they're valid.
+  const keepCurated = f.src === "curated" && !f.offMap && seatIds.has(f.seat);
+  const seat = keepCurated ? f.seat : locate(f.lng, f.lat);
   if (!seat) {
     if (f.src === "curated") {
       // Curated campuses outside Telangana stay listed without a marker.
@@ -385,11 +388,10 @@ for (const f of [...curated, ...govt, ...osm]) {
   }
   const serves = f.src === "curated" ? [...new Set([seat, ...f.serves])] : [seat];
   const out = { ...f, seat, serves };
-  if (f.src === "curated") {
-    // The old simplified 23-seat map placed some campuses "outside"; with the full state they are on the map.
+  if (f.src === "curated" && !keepCurated) {
+    // Listed as outside the old 23-seat city map; with the whole state it's on the map now.
     delete out.offMap;
-    // `field` notes explained quirks of the old simplified boundaries.
-    delete out.field;
+    stats.curatedRelocated = (stats.curatedRelocated ?? 0) + 1;
   }
   out.campus ||= seats.find((s) => s.id === seat)?.name ?? "";
   facilities.push(out);

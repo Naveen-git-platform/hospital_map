@@ -2,12 +2,13 @@ import { Ambulance, PanelLeftOpen } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { type MapHandle, type MapInsets, MapView } from "./components/MapView";
 import { type LocationState, LocationProvider, type LocStatus, Logo, Panel, type SheetState } from "./components/Panel";
-import { getHospital, loadData } from "./lib/data";
+import { getHospital, getSeat, loadData } from "./lib/data";
 import { nearest, seatAt } from "./lib/geo";
 import { fetchApproxLocation, loadSavedLocation, requestPosition, saveLocation } from "./lib/location";
 import { initSearch } from "./lib/search";
 import { APP_NAME, APP_REGION } from "./lib/theme";
 import type { FilterId, LatLng } from "./lib/types";
+import { readUrl, writeUrl } from "./lib/url";
 
 const DESKTOP_QUERY = "(min-width: 768px)";
 /** Floating panel width (400) plus its 16px gutter. */
@@ -91,6 +92,10 @@ export function App() {
     [applyFix],
   );
 
+  /** Open whatever a shared link points at. Counts as interaction, so GPS won't move the camera away. */
+  const openFromUrlRef = useRef<() => void>(() => {});
+  const openFromUrl = useCallback(() => openFromUrlRef.current(), []);
+
   // Startup: data, then the quickest location we can get, then the exact one.
   useEffect(() => {
     let cancelled = false;
@@ -101,6 +106,7 @@ export function App() {
         if (cancelled) return;
         setDataReady(true);
         initSearch();
+        openFromUrl();
         const saved = loadSavedLocation();
         if (saved) {
           applyFix(saved, { save: false, moveCamera: true });
@@ -122,7 +128,12 @@ export function App() {
       cancelled = true;
       cancelLocate?.();
     };
-  }, [applyFix, locate]);
+  }, [applyFix, locate, openFromUrl]);
+
+  // Keep the address bar in step with what's on screen, so any view can be shared.
+  useEffect(() => {
+    if (dataReady) writeUrl({ ac: seatId, h: hospitalId, f: filter, q: query });
+  }, [dataReady, seatId, hospitalId, filter, query]);
 
   /** On phones, drop the sheet to half height so the map target stays visible. */
   const revealMap = () => {
@@ -162,6 +173,16 @@ export function App() {
       mapRef.current?.focusPoint(h.lng, h.lat);
     }
   }
+
+  openFromUrlRef.current = () => {
+    const init = readUrl();
+    if (init.f) setFilter(init.f);
+    if (init.q) setQuery(init.q);
+    if (init.h && getHospital(init.h)) selectHospital(init.h);
+    else if (init.ac && getSeat(init.ac)) selectSeat(init.ac);
+    else return;
+    interacted.current = true;
+  };
 
   function back() {
     if (hospitalId) {

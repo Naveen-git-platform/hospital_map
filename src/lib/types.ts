@@ -25,6 +25,8 @@ export interface Hospital {
   address: string;
   /** Curated description; absent for OpenStreetMap / open-data rows. */
   note?: string;
+  /** Explains where the pin sits relative to the constituency boundary (curated only). */
+  field?: string;
   facts?: string[];
   caution?: string;
   closed?: boolean;

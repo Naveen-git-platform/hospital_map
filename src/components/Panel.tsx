@@ -8,8 +8,10 @@ import {
   MapPin,
   Navigation,
   PanelLeftClose,
+  Flag,
   Phone,
   Search,
+  Share2,
   Siren,
   TriangleAlert,
   X,
@@ -39,6 +41,7 @@ import {
 import { distanceKm, formatDistance, nearest } from "../lib/geo";
 import { useSearch } from "../lib/search";
 import { APP_NAME, APP_REGION, glyphSvg, MARKER_KINDS, pcColor } from "../lib/theme";
+import { reportHref, shareLink, type UrlState } from "../lib/url";
 import type { FilterId, Hospital, LatLng, SeatProps } from "../lib/types";
 
 export type SheetState = "peek" | "half" | "full";
@@ -708,6 +711,25 @@ function BackButton({ label, onClick }: { label: string; onClick: () => void }) 
   );
 }
 
+function ShareButton({ title, state }: { title: string; state: UrlState }) {
+  const [note, setNote] = useState<string | null>(null);
+  return (
+    <button
+      type="button"
+      onClick={async () => {
+        const result = await shareLink(title, state);
+        if (result === "shared") return;
+        setNote(result === "copied" ? "Link copied" : "Couldn’t share");
+        window.setTimeout(() => setNote(null), 2000);
+      }}
+      className="mt-3 flex min-h-10 items-center gap-2 rounded-full px-3 text-sm font-semibold text-primary hover:bg-primary-soft"
+    >
+      <Share2 className="size-4" />
+      {note ?? "Share"}
+    </button>
+  );
+}
+
 function SeatDetail({
   seat,
   filter,
@@ -728,7 +750,10 @@ function SeatDetail({
   const first = firstRecommended(list);
   return (
     <div>
-      <BackButton label="All areas" onClick={onBack} />
+      <div className="flex items-center justify-between pr-3">
+        <BackButton label="All areas" onClick={onBack} />
+        <ShareButton title={`Hospitals in ${seat.name} · ${APP_NAME}`} state={{ ac: seat.id, f: filter }} />
+      </div>
       <section className="px-5 pt-2">
         <div className="flex flex-wrap items-center gap-1.5">
           <span className="rounded-full bg-ink px-2.5 py-1 text-[11px] font-bold text-white">AC {seat.acNo}</span>
@@ -844,7 +869,10 @@ function HospitalDetail({ hospital: h, onBack }: { hospital: Hospital; onBack: (
   const km = loc.user && !h.offMap ? distanceKm(loc.user, h) : null;
   return (
     <div>
-      <BackButton label={seat ? `Back to ${seat.name}` : "Back"} onClick={onBack} />
+      <div className="flex items-center justify-between pr-3">
+        <BackButton label={seat ? `Back to ${seat.name}` : "Back"} onClick={onBack} />
+        <ShareButton title={`${h.name} · ${APP_NAME}`} state={{ h: h.id }} />
+      </div>
       <section className="mx-3 mt-2 rounded-3xl p-4" style={{ background: `${color}14` }}>
         <div className="flex items-center gap-3">
           <KindBadge hospital={h} large />
@@ -917,6 +945,7 @@ function HospitalDetail({ hospital: h, onBack }: { hospital: Hospital; onBack: (
             {h.offMap
               ? "Outside Telangana, so it has no marker."
               : `In ${seat?.name ?? "this area"} constituency${seat ? ` (${seat.pc} Lok Sabha)` : ""}.`}{" "}
+            {h.field ? `${h.field} ` : ""}
             {h.src === "osm"
               ? "Listed in OpenStreetMap."
               : h.src === "govt"
@@ -924,6 +953,15 @@ function HospitalDetail({ hospital: h, onBack }: { hospital: Hospital; onBack: (
                 : "Curated listing."}
           </p>
         </section>
+        <a
+          href={reportHref(h)}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center gap-2 self-start rounded-full px-1 text-xs font-semibold text-subtle hover:text-ink"
+        >
+          <Flag className="size-3.5" />
+          Report a problem with this listing
+        </a>
       </div>
     </div>
   );

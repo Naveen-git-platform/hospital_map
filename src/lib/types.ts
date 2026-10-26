@@ -79,3 +79,5 @@ export type FilterId =
   | "emergency";
 
 export type HospitalKind = "government" | "corporate" | "trust" | "military" | "midsized";
+
+export type MarkerKind = "govt" | "leading" | "private" | "project" | "closed" | "clinic";

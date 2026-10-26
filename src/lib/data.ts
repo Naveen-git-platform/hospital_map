@@ -3,7 +3,16 @@ import seatsJson from "../data/constituencies.json";
 import hospitalsJson from "../data/hospitals.json";
 import seatGuidesJson from "../data/seat-guides.json";
 import { survey } from "../data/survey";
-import type { FilterId, Hospital, HospitalKind, SeatCollection, SeatFeature, SeatGuide, SeatProps } from "./types";
+import type {
+  FilterId,
+  Hospital,
+  HospitalKind,
+  MarkerKind,
+  SeatCollection,
+  SeatFeature,
+  SeatGuide,
+  SeatProps,
+} from "./types";
 
 // ---------------------------------------------------------------------------
 // Data
@@ -30,26 +39,50 @@ export const getSeatFeature = (id: string): SeatFeature | undefined => seatFeatu
 // Filters
 // ---------------------------------------------------------------------------
 
-export const FILTERS: { id: FilterId; label: string }[] = [
-  { id: "about", label: "About" },
-  { id: "all", label: "All" },
-  { id: "government", label: "Government" },
-  { id: "corporate", label: "Corporate" },
-  { id: "trust", label: "Trust & NGO" },
-  { id: "military", label: "Military" },
-  { id: "midsized", label: "Mid-size" },
-  { id: "community", label: "Health centres" },
-  { id: "primary", label: "Primary centres" },
-  { id: "wellness", label: "Wellness clinics" },
-  { id: "subcentre", label: "Sub-centres" },
-  { id: "dispensary", label: "Dispensaries" },
-  { id: "projects", label: "Projects" },
-  { id: "trusted", label: "Top hospitals" },
-  { id: "heart", label: "Heart" },
-  { id: "cancer", label: "Cancer" },
-  { id: "women-child", label: "Women & child" },
-  { id: "emergency", label: "Emergency" },
+export type FilterGroupId = "areas" | "hospitals" | "clinics" | "care";
+
+/** Filters grouped into the panel's tabs. The first filter of a group is its default. */
+export const FILTER_GROUPS: { id: FilterGroupId; label: string; filters: { id: FilterId; label: string }[] }[] = [
+  { id: "areas", label: "Areas", filters: [{ id: "about", label: "Constituencies" }] },
+  {
+    id: "hospitals",
+    label: "Hospitals",
+    filters: [
+      { id: "all", label: "All" },
+      { id: "trusted", label: "Top rated" },
+      { id: "government", label: "Government" },
+      { id: "corporate", label: "Corporate" },
+      { id: "trust", label: "Trust & NGO" },
+      { id: "midsized", label: "Mid-size" },
+      { id: "military", label: "Military" },
+      { id: "projects", label: "Upcoming" },
+    ],
+  },
+  {
+    id: "clinics",
+    label: "Clinics",
+    filters: [
+      { id: "wellness", label: "Wellness" },
+      { id: "primary", label: "Primary" },
+      { id: "community", label: "Community" },
+      { id: "subcentre", label: "Sub-centres" },
+      { id: "dispensary", label: "Dispensaries" },
+    ],
+  },
+  {
+    id: "care",
+    label: "Care",
+    filters: [
+      { id: "emergency", label: "Emergency" },
+      { id: "heart", label: "Heart" },
+      { id: "cancer", label: "Cancer" },
+      { id: "women-child", label: "Women & child" },
+    ],
+  },
 ];
+
+export const groupOfFilter = (f: FilterId): FilterGroupId =>
+  FILTER_GROUPS.find((g) => g.filters.some((x) => x.id === f))?.id ?? "areas";
 
 export const FILTER_INTROS: Record<Exclude<FilterId, "about">, { title: string; line: string }> = {
   all: {
@@ -155,34 +188,21 @@ function pinRole(h: Hospital): PinRole {
   return "campus";
 }
 
-/** CSS class for the map pin. */
-export function pinClass(h: Hospital): string {
-  if (h.clinic) return h.closed ? "pin pin-clinic pin-closed" : "pin pin-clinic";
+/** Visual marker category, shared by map pins, list badges and the map key. */
+export function markerKind(h: Hospital): MarkerKind {
+  if (h.clinic) return h.closed ? "closed" : "clinic";
   switch (pinRole(h)) {
     case "project":
-      return "pin pin-project";
+      return "project";
     case "closed":
-      return "pin pin-closed";
+      return "closed";
     case "anchor":
-      return "pin pin-public";
+      return "govt";
     case "trusted":
-      return "pin";
+      return "leading";
     default:
-      return "pin pin-specialty";
+      return "private";
   }
-}
-
-/** CSS class for the small marker shown in list rows. */
-export const dotClass = (h: Hospital) => pinClass(h).replace(/^pin\b/, "pin-dot");
-
-/** Legend bucket used by the "Filter pins" panel. */
-export function legendRole(h: Hospital): "closed" | "project" | "leading" | "govt" | null {
-  const role = pinRole(h);
-  if (role === "closed") return "closed";
-  if (role === "project") return "project";
-  if (role === "trusted") return "leading";
-  if (role === "anchor" || h.clinic) return "govt";
-  return null;
 }
 
 function listPriority(h: Hospital): number {

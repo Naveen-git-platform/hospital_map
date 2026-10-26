@@ -1,6 +1,6 @@
-# Hyderabad Healthcare
+# CareMap Hyderabad
 
-**Live:** https://naveen-git-platform.github.io/hospital_map/
+**Live:** https://hospital-map-hyd.vercel.app/ · https://naveen-git-platform.github.io/hospital_map/
 
 ## Run
 
@@ -12,7 +12,7 @@ npm run build    # type-check + production build into dist/
 
 ## Stack
 
-Vite, React 19, TypeScript, Tailwind CSS v4, MapLibre GL with OpenFreeMap "Liberty" tiles, Mapterhorn terrain, and lucide-react icons.
+Vite, React 19, TypeScript, Tailwind CSS v4, MapLibre GL with OpenFreeMap "Positron" tiles, Plus Jakarta Sans, and lucide-react icons.
 
 ## Layout
 
@@ -24,9 +24,10 @@ Vite, React 19, TypeScript, Tailwind CSS v4, MapLibre GL with OpenFreeMap "Liber
 | `src/data/seat-guides.json` | Per-constituency neighbourhoods and guide text |
 | `src/data/survey.ts` | Field-survey notes; only used by search |
 | `src/lib/data.ts` | Classification, filters, sorting and search |
-| `src/components/MapView.tsx` | MapLibre map: constituency fills, pins, clinic layer, legend filter |
-| `src/components/Guide.tsx` | Sidebar: search, filter chips, seat and hospital views, mobile card |
-| `src/App.tsx` | Layout, selection state, resizable sidebar, mobile Map/Guide toggle |
+| `src/lib/theme.ts` | Brand name, palette and marker kinds (colour, label, icon) |
+| `src/components/MapView.tsx` | MapLibre map: constituency fills and tags, teardrop markers, clinic layer, map key |
+| `src/components/Panel.tsx` | Floating panel (desktop) / bottom sheet (mobile): search, tabs, area and hospital views |
+| `src/App.tsx` | Layout, selection state, sheet height, map insets |
 
 ## Editing data
 

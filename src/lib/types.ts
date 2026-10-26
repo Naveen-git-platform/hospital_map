@@ -1,54 +1,57 @@
 export type Tier = "flagship" | "public" | "specialty";
 export type Focus = "heart" | "cancer" | "transplant" | "emergency" | "gastro" | "neuro" | "women-child";
-export type ClinicKind = "community" | "primary" | "wellness" | "subcentre" | "dispensary";
+export type ClinicKind = "community" | "primary" | "wellness" | "subcentre" | "dispensary" | "private";
+export type Ownership = "government" | "private" | "charitable" | "military";
 
-/** A hospital or government clinic. Clinics carry `clinic`; curated hospitals do not. */
+/** A hospital or clinic. Clinics carry `clinic`; hospitals do not. */
 export interface Hospital {
   id: string;
   name: string;
   campus: string;
-  /** Constituency id whose polygon the gate falls in. */
+  /** Constituency id whose polygon the facility sits in. */
   seat: string;
-  /** Constituency ids this campus serves (always includes `seat`). */
+  /** Constituency ids this facility serves (always includes `seat`). */
   serves: string[];
   tier: Tier;
   focus: Focus[];
   /** Sort order within lists; lower first. */
   rank: number;
-  /** Present on the "Top hospitals" set; lower is more prominent. */
+  /** Present on the curated "Featured" set; lower is more prominent. */
   lead?: number;
   bestFor: string;
   lat: number;
   lng: number;
   phone?: string;
   address: string;
-  note: string;
-  /** Explains where the pin sits relative to the constituency map. */
-  field?: string;
+  /** Curated description; absent for OpenStreetMap / open-data rows. */
+  note?: string;
   facts?: string[];
   caution?: string;
   closed?: boolean;
   project?: boolean;
   expanding?: boolean;
   phase?: "open" | "building";
-  gapPin?: boolean;
   /** Outside the mapped constituencies; listed but not pinned. */
   offMap?: boolean;
   clinic?: ClinicKind;
+  /** Where the record came from. */
+  src?: "curated" | "govt" | "osm";
+  own?: Ownership;
+  /** Private hospital belonging to a large chain. */
+  corporate?: boolean;
+  beds?: number;
 }
 
 export interface SeatProps {
   id: string;
   name: string;
   acNo: number;
-  pc: ParliamentaryConstituency;
-  district: string;
+  /** Lok Sabha (parliamentary) constituency. */
+  pc: string;
   /** Label position. */
   lng: number;
   lat: number;
 }
-
-export type ParliamentaryConstituency = "Secunderabad" | "Hyderabad" | "Malkajgiri" | "Chevella";
 
 export interface SeatGuide {
   mapLabel: string;
@@ -56,7 +59,8 @@ export interface SeatGuide {
   guide: string;
 }
 
-export type SeatFeature = GeoJSON.Feature<GeoJSON.Polygon, SeatProps> & { id: string };
+export type SeatGeometry = GeoJSON.Polygon | GeoJSON.MultiPolygon;
+export type SeatFeature = GeoJSON.Feature<SeatGeometry, SeatProps> & { id: string };
 export interface SeatCollection {
   type: "FeatureCollection";
   features: SeatFeature[];
@@ -80,4 +84,9 @@ export type FilterId =
 
 export type HospitalKind = "government" | "corporate" | "trust" | "military" | "midsized";
 
-export type MarkerKind = "govt" | "leading" | "private" | "project" | "closed" | "clinic";
+export type MarkerKind = "govt" | "leading" | "private" | "project" | "closed" | "clinic" | "pclinic";
+
+export interface LatLng {
+  lat: number;
+  lng: number;
+}

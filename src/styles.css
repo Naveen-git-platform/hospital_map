@@ -152,9 +152,6 @@ body {
   opacity: 0.45;
   pointer-events: none;
 }
-.map-root[data-zoom="far"] .mk-body {
-  transform: scale(0.68);
-}
 @media (hover: hover) {
   .mk:hover .mk-body {
     transform: scale(1.12);
@@ -207,34 +204,6 @@ body {
   .mk.is-selected .mk-halo {
     animation: none;
   }
-}
-
-/* ---- Constituency name tags -------------------------------------------- */
-
-.area-tag {
-  padding: 0.25rem 0.55rem;
-  border-radius: 999px;
-  background: rgb(255 255 255 / 0.92);
-  box-shadow: 0 1px 4px rgb(15 23 42 / 0.16);
-  color: var(--color-ink);
-  font: 700 0.68rem/1 var(--font-sans);
-  white-space: nowrap;
-  pointer-events: none;
-  transition: opacity 0.2s;
-}
-.area-tag.is-selected {
-  background: var(--color-primary);
-  color: #fff;
-}
-.area-tag.is-dim {
-  opacity: 0.45;
-}
-.map-root[data-zoom="far"] .area-tag {
-  padding: 0.2rem 0.4rem;
-  font-size: 0.58rem;
-}
-.map-root[data-zoom="near"] .area-tag:not(.is-selected) {
-  opacity: 0;
 }
 
 /* ---- Floating map chrome ----------------------------------------------- */
@@ -297,5 +266,19 @@ body {
 @media (max-width: 767px) {
   .map-root .maplibregl-ctrl-bottom-right {
     display: none;
+  }
+}
+
+/* "Show my location" sits under the zoom/compass group (3 × 2.75rem). */
+.locate-btn {
+  position: absolute;
+  z-index: 10;
+  top: calc(max(0.75rem, env(safe-area-inset-top)) + 3.5rem + 8.25rem + 0.5rem);
+  right: 0.75rem;
+}
+@media (min-width: 768px) {
+  .locate-btn {
+    top: calc(4.5rem + 8.25rem + 0.5rem);
+    right: 1rem;
   }
 }

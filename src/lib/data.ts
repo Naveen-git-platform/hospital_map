@@ -1,8 +1,8 @@
-import clinicsJson from "../data/clinics.json";
-import seatsJson from "../data/constituencies.json";
-import hospitalsJson from "../data/hospitals.json";
 import seatGuidesJson from "../data/seat-guides.json";
 import { survey } from "../data/survey";
+import seatsUrl from "../generated/constituencies.json?url";
+import facilitiesUrl from "../generated/facilities.json?url";
+import meta from "../generated/meta.json";
 import type {
   FilterId,
   Hospital,
@@ -10,30 +10,68 @@ import type {
   MarkerKind,
   SeatCollection,
   SeatFeature,
+  SeatGeometry,
   SeatGuide,
   SeatProps,
 } from "./types";
 
 // ---------------------------------------------------------------------------
-// Data
+// Data (loaded once at startup; the bindings below are filled by loadData)
 // ---------------------------------------------------------------------------
 
-/** Curated hospitals first, then the Telangana health-centre file rows. */
-export const HOSPITALS: Hospital[] = [...(hospitalsJson as Hospital[]), ...(clinicsJson as Hospital[])];
-export const SEATS_GEOJSON = seatsJson as unknown as SeatCollection;
+export const DATA_META = meta;
 export const SEAT_GUIDES = seatGuidesJson as Record<string, SeatGuide>;
 
-export const SEATS: SeatProps[] = SEATS_GEOJSON.features
-  .map((f) => f.properties)
-  .sort((a, b) => a.name.localeCompare(b.name));
+export let HOSPITALS: Hospital[] = [];
+export let SEATS_GEOJSON: SeatCollection = { type: "FeatureCollection", features: [] };
+/** Constituencies sorted by name. */
+export let SEATS: SeatProps[] = [];
+/** Lok Sabha seats, ordered north to south by their first assembly constituency number. */
+export let PC_ORDER: string[] = [];
 
-const hospitalById = new Map(HOSPITALS.map((h) => [h.id, h]));
-const seatById = new Map(SEATS.map((s) => [s.id, s]));
-const seatFeatureById = new Map(SEATS_GEOJSON.features.map((f) => [f.id, f]));
+let hospitalById = new Map<string, Hospital>();
+let seatById = new Map<string, SeatProps>();
+let seatFeatureById = new Map<string, SeatFeature>();
+/** Facilities serving each constituency. */
+let servedBy = new Map<string, Hospital[]>();
 
 export const getHospital = (id: string) => hospitalById.get(id);
 export const getSeat = (id: string) => seatById.get(id);
 export const getSeatFeature = (id: string): SeatFeature | undefined => seatFeatureById.get(id);
+
+let loading: Promise<void> | null = null;
+
+/** Fetches facilities and boundaries in parallel and builds the lookup tables. Safe to call repeatedly. */
+export function loadData(): Promise<void> {
+  loading ??= (async () => {
+    const [facilities, seats] = await Promise.all([
+      fetch(facilitiesUrl).then((r) => {
+        if (!r.ok) throw new Error(`facilities ${r.status}`);
+        return r.json() as Promise<Hospital[]>;
+      }),
+      fetch(seatsUrl).then((r) => {
+        if (!r.ok) throw new Error(`constituencies ${r.status}`);
+        return r.json() as Promise<SeatCollection>;
+      }),
+    ]);
+    HOSPITALS = facilities;
+    SEATS_GEOJSON = seats;
+    SEATS = seats.features.map((f) => f.properties).sort((a, b) => a.name.localeCompare(b.name));
+    const firstAc = new Map<string, number>();
+    for (const s of SEATS) firstAc.set(s.pc, Math.min(firstAc.get(s.pc) ?? Infinity, s.acNo));
+    PC_ORDER = [...firstAc.keys()].sort((a, b) => (firstAc.get(a) ?? 0) - (firstAc.get(b) ?? 0));
+
+    hospitalById = new Map(HOSPITALS.map((h) => [h.id, h]));
+    seatById = new Map(SEATS.map((s) => [s.id, s]));
+    seatFeatureById = new Map(seats.features.map((f) => [f.id, f]));
+    servedBy = new Map(SEATS.map((s) => [s.id, []]));
+    for (const h of HOSPITALS) for (const s of h.serves ?? []) servedBy.get(s)?.push(h);
+  })();
+  loading.catch(() => {
+    loading = null;
+  });
+  return loading;
+}
 
 // ---------------------------------------------------------------------------
 // Filters
@@ -49,12 +87,12 @@ export const FILTER_GROUPS: { id: FilterGroupId; label: string; filters: { id: F
     label: "Hospitals",
     filters: [
       { id: "all", label: "All" },
-      { id: "trusted", label: "Top rated" },
       { id: "government", label: "Government" },
       { id: "corporate", label: "Corporate" },
+      { id: "midsized", label: "Private" },
       { id: "trust", label: "Trust & NGO" },
-      { id: "midsized", label: "Mid-size" },
       { id: "military", label: "Military" },
+      { id: "trusted", label: "Featured (Hyd)" },
       { id: "projects", label: "Upcoming" },
     ],
   },
@@ -62,11 +100,12 @@ export const FILTER_GROUPS: { id: FilterGroupId; label: string; filters: { id: F
     id: "clinics",
     label: "Clinics",
     filters: [
-      { id: "wellness", label: "Wellness" },
       { id: "primary", label: "Primary" },
+      { id: "wellness", label: "Wellness" },
       { id: "community", label: "Community" },
       { id: "subcentre", label: "Sub-centres" },
       { id: "dispensary", label: "Dispensaries" },
+      { id: "private", label: "Private" },
     ],
   },
   {
@@ -87,59 +126,63 @@ export const groupOfFilter = (f: FilterId): FilterGroupId =>
 export const FILTER_INTROS: Record<Exclude<FilterId, "about">, { title: string; line: string }> = {
   all: {
     title: "All hospitals",
-    line: "Every campus on this map, grouped by the constituency colour it falls in.",
+    line: "Every hospital on the map, grouped by assembly constituency.",
   },
   government: {
-    title: "Government and public hospitals",
-    line: "State and central hospitals that treat at a nominal fee or free. Community centres and primary clinics are under their own filters.",
+    title: "Government hospitals",
+    line: "State and central hospitals that treat free or at a nominal fee. Health centres and clinics are under the Clinics tab.",
   },
   corporate: {
-    title: "Private corporate hospitals",
-    line: "The large company-run hospitals: Apollo, Yashoda, KIMS, AIG, CARE, Continental, and the other chains.",
+    title: "Corporate hospitals",
+    line: "Hospitals run by the large private chains: Apollo, Yashoda, KIMS, AIG, CARE, Medicover and others.",
   },
   trust: {
-    title: "NGO, trust and charitable hospitals",
-    line: "Hospitals run by a trust, a mission or a medical college society. They are not government hospitals.",
+    title: "Trust and charitable hospitals",
+    line: "Hospitals run by a trust, mission or charitable society.",
   },
   military: {
-    title: "Military and defence hospitals",
-    line: "Army, air force and defence hospitals. Apollo DRDO is included. These are not walk-in public hospitals.",
+    title: "Military hospitals",
+    line: "Army, air force and defence hospitals. Most are not walk-in public hospitals.",
   },
   midsized: {
-    title: "Mid-size and small hospitals",
-    line: "Private hospitals that are not part of the large corporate chains.",
+    title: "Private hospitals",
+    line: "Private hospitals and nursing homes outside the large corporate chains.",
   },
   community: {
-    title: "Health centres",
-    line: "Community health centres from the Telangana health-centre file, plus the ones already on this map.",
+    title: "Community health centres",
+    line: "Government community health centres: larger than a primary centre, often with beds.",
   },
   primary: {
-    title: "Primary centres",
-    line: "Primary health centres and urban primary centres. Local government clinics, not big hospitals.",
+    title: "Primary health centres",
+    line: "Government primary and urban health centres. The first stop for routine care, free of charge.",
   },
   wellness: {
     title: "Wellness clinics",
-    line: "Urban health and wellness clinics, including Basti Dawakhanas, from the health-centre file.",
+    line: "Urban health and wellness centres, including Basti and Palle Dawakhanas.",
   },
   subcentre: {
     title: "Sub-centres",
-    line: "The smallest government clinics in the health-centre file. One nurse post, not a hospital.",
+    line: "The smallest government health posts, usually staffed by a nurse or ANM.",
   },
   dispensary: {
     title: "Dispensaries",
-    line: "Ayurveda, homoeopathy, Unani and other government dispensaries.",
+    line: "Government Ayurveda, Homoeopathy, Unani and other AYUSH dispensaries.",
+  },
+  private: {
+    title: "Private clinics",
+    line: "Private clinics and doctors’ practices listed in OpenStreetMap.",
   },
   projects: {
-    title: "Projects",
-    line: "New campuses and sites still being built, including the TIMS plan.",
+    title: "Upcoming",
+    line: "New hospitals and expansions still being built, including the TIMS hospitals.",
   },
   trusted: {
-    title: "Top hospitals",
-    line: "KIMS, Apollo Jubilee Hills, Yashoda at Somajiguda, Secunderabad and Malakpet, NIMS, and AIG.",
+    title: "Featured hospitals (Hyderabad)",
+    line: "Hand-picked leading hospitals in Hyderabad: KIMS, Apollo Jubilee Hills, Yashoda, NIMS and AIG.",
   },
-  heart: { title: "Heart", line: "Hospitals this study marks for heart care." },
-  cancer: { title: "Cancer", line: "Hospitals this study marks for cancer care." },
-  "women-child": { title: "Women and child", line: "Maternity and children’s hospitals." },
+  heart: { title: "Heart care", line: "Hospitals marked for cardiology or heart care." },
+  cancer: { title: "Cancer care", line: "Hospitals marked for oncology or cancer care." },
+  "women-child": { title: "Women and child", line: "Maternity, gynaecology and children’s hospitals." },
   emergency: {
     title: "Emergency",
     line: "Hospitals marked for emergency care. For an ambulance, call 108.",
@@ -190,7 +233,7 @@ function pinRole(h: Hospital): PinRole {
 
 /** Visual marker category, shared by map pins, list badges and the map key. */
 export function markerKind(h: Hospital): MarkerKind {
-  if (h.clinic) return h.closed ? "closed" : "clinic";
+  if (h.clinic) return h.closed ? "closed" : h.clinic === "private" ? "pclinic" : "clinic";
   switch (pinRole(h)) {
     case "project":
       return "project";
@@ -208,28 +251,43 @@ export function markerKind(h: Hospital): MarkerKind {
 function listPriority(h: Hospital): number {
   if (h.closed && !h.clinic) return 0;
   if (h.project) return 1;
-  if (h.tier === "public") return 2;
+  if (h.src === "curated" && h.tier === "public") return 2;
   if (h.lead) return 3;
-  return 4;
+  if (h.src === "curated") return 4;
+  if (h.tier === "public") return 5;
+  return 6;
 }
 
 const leadOrder = (h: Hospital) => h.lead ?? 99;
 
 export function hospitalKind(h: Hospital): HospitalKind | null {
   if (h.clinic || h.id.startsWith("chc-") || h.id.startsWith("phc-")) return null;
-  if (MILITARY_IDS.has(h.id)) return "military";
-  if (TRUST_IDS.has(h.id)) return "trust";
-  if (h.tier === "public") return "government";
-  if (MIDSIZED_IDS.has(h.id)) return "midsized";
-  return "corporate";
+  if (h.src === "curated") {
+    if (MILITARY_IDS.has(h.id)) return "military";
+    if (TRUST_IDS.has(h.id)) return "trust";
+    if (h.tier === "public") return "government";
+    if (MIDSIZED_IDS.has(h.id)) return "midsized";
+    return "corporate";
+  }
+  switch (h.own) {
+    case "government":
+      return "government";
+    case "military":
+      return "military";
+    case "charitable":
+      return "trust";
+    default:
+      return h.corporate ? "corporate" : "midsized";
+  }
 }
 
 const CLINIC_LABELS = {
-  community: "Health centre",
-  primary: "Primary centre",
+  community: "Community health centre",
+  primary: "Primary health centre",
   wellness: "Wellness clinic",
   subcentre: "Sub-centre",
   dispensary: "Dispensary",
+  private: "Private clinic",
 } as const;
 
 /** Short status line, e.g. "Corporate" or "Under construction". */
@@ -239,7 +297,7 @@ export function statusLabel(h: Hospital): string {
     return h.closed ? `${label} · not working` : label;
   }
   if (h.closed) return "Closed";
-  if (h.offMap && h.phase === "building") return "Under construction · outside this map";
+  if (h.offMap && h.phase === "building") return "Under construction · outside Telangana";
   if (h.phase === "open") return "Open · government";
   if (h.phase === "building") return "Under construction";
   // hospitalKind is null only for chc-/phc- campuses, which fall through below.
@@ -253,7 +311,7 @@ export function statusLabel(h: Hospital): string {
     case "military":
       return "Military";
     case "midsized":
-      return "Mid-size";
+      return h.src === "curated" ? "Mid-size" : "Private";
   }
   if (h.project) return h.tier === "public" ? "Government project" : "New private campus";
   if (h.lead) return h.tier === "public" ? "Leading government" : "Leading hospital";
@@ -270,6 +328,7 @@ export function matchesFilter(h: Hospital, filter: FilterId): boolean {
     case "wellness":
     case "subcentre":
     case "dispensary":
+    case "private":
       return h.clinic === filter;
   }
   // Clinics stay out of every hospital filter.
@@ -300,83 +359,49 @@ export function matchesFilter(h: Hospital, filter: FilterId): boolean {
 
 const seatCache = new Map<string, Hospital[]>();
 
-/** Hospitals that serve a seat under a filter: in-seat first, then by priority. */
+/** Facilities that serve a seat under a filter: in-seat first, then by priority. */
 export function hospitalsForSeat(seatId: string, filter: FilterId): Hospital[] {
   const key = `${seatId}|${filter}`;
   const cached = seatCache.get(key);
   if (cached) return cached;
-  const list = HOSPITALS.filter((h) => h.serves.includes(seatId) && matchesFilter(h, filter)).sort((a, b) => {
-    const aOut = a.seat === seatId ? 0 : 1;
-    const bOut = b.seat === seatId ? 0 : 1;
-    if (aOut !== bOut) return aOut - bOut;
-    if (filter === "trusted") return leadOrder(a) - leadOrder(b) || a.rank - b.rank;
-    return listPriority(a) - listPriority(b) || a.rank - b.rank;
-  });
+  const list = (servedBy.get(seatId) ?? [])
+    .filter((h) => matchesFilter(h, filter))
+    .sort((a, b) => {
+      const aOut = a.seat === seatId ? 0 : 1;
+      const bOut = b.seat === seatId ? 0 : 1;
+      if (aOut !== bOut) return aOut - bOut;
+      if (filter === "trusted") return leadOrder(a) - leadOrder(b) || a.rank - b.rank;
+      return listPriority(a) - listPriority(b) || a.rank - b.rank;
+    });
   seatCache.set(key, list);
   return list;
 }
 
-const haystack = (parts: string[]) => parts.join(" ").toLowerCase();
-const hospitalIndex = new Map<string, string>();
-
-function hospitalMatchesQuery(h: Hospital, q: string): boolean {
-  if (!q) return true;
-  let text = hospitalIndex.get(h.id);
-  if (text === undefined) {
-    text = haystack([
-      h.name,
-      h.campus,
-      h.bestFor,
-      h.address,
-      h.note,
-      h.field ?? "",
-      ...(h.facts ?? []),
-      getSeat(h.seat)?.name ?? "",
-      SEAT_GUIDES[h.seat]?.places ?? "",
-    ]);
-    hospitalIndex.set(h.id, text);
-  }
-  return text.includes(q);
-}
-
-export function seatMatches(seat: SeatProps, q: string, filter: FilterId): boolean {
-  const served = hospitalsForSeat(seat.id, filter);
-  if (filter !== "all" && filter !== "about" && served.length === 0) return false;
-  if (!q) return true;
-  const guide = SEAT_GUIDES[seat.id];
-  const note = survey[seat.id];
-  return haystack([
-    seat.name,
-    seat.pc,
-    seat.district,
-    guide?.places ?? "",
-    guide?.guide ?? "",
-    note?.finding ?? "",
-    note?.gap ?? "",
-    ...served.map((h) => `${h.name} ${h.campus}`),
-  ]).includes(q);
-}
-
-/** Hospitals matching a query under a filter. Clinics surface in text search under About/All. */
-export function searchHospitals(q: string, filter: FilterId): Hospital[] {
-  const hasQuery = q.trim().length > 0;
-  return HOSPITALS.filter((h) => {
-    if (!hospitalMatchesQuery(h, q)) return false;
-    if (h.clinic && hasQuery && (filter === "all" || filter === "about")) return true;
-    return matchesFilter(h, filter);
-  }).sort((a, b) =>
+/** Every facility under a filter, in list order. */
+export function hospitalsForFilter(filter: FilterId): Hospital[] {
+  return HOSPITALS.filter((h) => matchesFilter(h, filter)).sort((a, b) =>
     filter === "trusted"
       ? leadOrder(a) - leadOrder(b) || a.rank - b.rank
       : listPriority(a) - listPriority(b) || a.rank - b.rank,
   );
 }
 
-/** First open, non-project hospital in a list — gets the "Start here" tag. */
-export function firstRecommended(list: Hospital[]): string | undefined {
-  return (list.find((h) => !h.closed && !(h.project && h.phase !== "open")) ?? list.find((h) => !h.closed))?.id;
+/** Text a constituency can be found by. */
+export function seatSearchText(seat: SeatProps): string {
+  const guide = SEAT_GUIDES[seat.id];
+  const note = survey[seat.id];
+  return [seat.name, seat.pc, guide?.places ?? "", guide?.guide ?? "", note?.finding ?? "", note?.gap ?? ""]
+    .join(" ")
+    .toLowerCase();
 }
 
-const areaName = (h: Hospital) => (h.offMap ? "Outside Hyderabad" : (getSeat(h.seat)?.name ?? "Other"));
+/** First open, non-project hospital in a list — gets the "Best bet" tag. */
+export function firstRecommended(list: Hospital[]): string | undefined {
+  return (list.find((h) => !h.clinic && !h.closed && !(h.project && h.phase !== "open")) ?? list.find((h) => !h.closed))
+    ?.id;
+}
+
+export const areaName = (h: Hospital) => (h.offMap ? "Outside Telangana" : (getSeat(h.seat)?.name ?? "Other"));
 
 export function groupBySeat(list: Hospital[]): { label: string; hospitals: Hospital[] }[] {
   const order: string[] = [];
@@ -397,7 +422,6 @@ export function groupBySeat(list: Hospital[]): { label: string; hospitals: Hospi
   return order.map((label) => ({ label, hospitals: groups.get(label) ?? [] }));
 }
 
-
 export const telHref = (phone: string) => `tel:${phone.replace(/[^\d+]/g, "")}`;
 
 export const mapsHref = (h: Hospital) =>
@@ -411,26 +435,35 @@ export const mapsHref = (h: Hospital) =>
 
 export type Bounds = [[number, number], [number, number]];
 
-function ringBounds(ring: GeoJSON.Position[]): Bounds {
+export function geometryBounds(geom: SeatGeometry): Bounds {
+  const polys = geom.type === "Polygon" ? [geom.coordinates] : geom.coordinates;
   let minX = Infinity,
     minY = Infinity,
     maxX = -Infinity,
     maxY = -Infinity;
-  for (const [x = 0, y = 0] of ring) {
-    if (x < minX) minX = x;
-    if (y < minY) minY = y;
-    if (x > maxX) maxX = x;
-    if (y > maxY) maxY = y;
-  }
+  for (const rings of polys)
+    for (const [x = 0, y = 0] of rings[0] ?? []) {
+      if (x < minX) minX = x;
+      if (y < minY) minY = y;
+      if (x > maxX) maxX = x;
+      if (y > maxY) maxY = y;
+    }
   return [
     [minX, minY],
     [maxX, maxY],
   ];
 }
 
-export const seatBounds = (f: SeatFeature): Bounds => ringBounds(f.geometry.coordinates[0] ?? []);
+export const seatBounds = (f: SeatFeature): Bounds => geometryBounds(f.geometry);
+
+/** Telangana's bounding box; used before data has loaded. */
+export const STATE_BOUNDS: Bounds = [
+  [77.24, 15.84],
+  [81.81, 19.91],
+];
 
 export function allSeatsBounds(): Bounds {
+  if (SEATS_GEOJSON.features.length === 0) return STATE_BOUNDS;
   let minX = Infinity,
     minY = Infinity,
     maxX = -Infinity,

@@ -1,0 +1,32 @@
+{
+ "built": "2026-10-26",
+ "counts": {
+  "total": 5592,
+  "hospitals": 2415,
+  "govtClinics": 2654,
+  "privateClinics": 523,
+  "curated": 106,
+  "constituencies": 119
+ },
+ "sources": [
+  {
+   "name": "OpenStreetMap contributors",
+   "license": "ODbL 1.0",
+   "url": "https://www.openstreetmap.org/copyright"
+  },
+  {
+   "name": "Telangana health-centre file (Open Data Telangana)",
+   "license": "Government Open Data License – India",
+   "url": "https://data.telangana.gov.in/"
+  },
+  {
+   "name": "DataMeet assembly constituencies",
+   "license": "CC BY 2.5 India",
+   "url": "https://github.com/datameet/maps"
+  },
+  {
+   "name": "Hyderabad hospital notes adapted from hydshealthcare.auka.ai",
+   "url": "https://hydshealthcare.auka.ai/"
+  }
+ ]
+}

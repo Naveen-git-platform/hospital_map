@@ -1,10 +1,10 @@
 {
- "built": "2026-10-26",
+ "built": "2026-11-01",
  "counts": {
-  "total": 5592,
-  "hospitals": 2415,
-  "govtClinics": 2654,
-  "privateClinics": 523,
+  "total": 860,
+  "hospitals": 137,
+  "govtClinics": 715,
+  "privateClinics": 8,
   "curated": 106,
   "constituencies": 119
  },
